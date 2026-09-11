@@ -95,13 +95,6 @@ graph TD
 ```
 *Architecture & Data Workflow: End-to-end flow from browser push-to-talk speech input to Gemini contrarian logic and script-aware TTS speech output.*
 
-For Hardware:
-
-# Schematic & Circuit
-*N/A (Software Project)*
-
-# Build Photos
-*N/A (Software Project)*
 
 ### Project Demo
 # Video
@@ -116,9 +109,9 @@ For Hardware:
 - Character Catalog API: `http://localhost:3001/api/characters`
 
 ## Team Contributions
-- [Team Lead Name]: [Full-stack architecture, Gemini AI integration, Malayalam/Manglish TTS engine, UI styling]
-- [Member 2 Name]: [Voice input implementation, character prompts design, testing]
-- [Member 3 Name]: [Documentation, asset design, audio effects]
+
+- **Talarin Miranda:** Full-stack architecture, Gemini AI integration, conversational AI logic, character/personality system, conversation memory, stubbornness & escalation mechanics, Malayalam/Manglish support, voice interaction, and UI/UX implementation.
+- **Sayoojya KS:** Character and prompt design, testing and debugging, response refinement, documentation, and presentation/demo preparation.
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
