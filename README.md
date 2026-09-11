@@ -59,7 +59,7 @@ npm run dev
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
+# Screenshots 
 <img width="1526" height="722" alt="Screenshot 2026-09-12 033932" src="https://github.com/user-attachments/assets/db514f86-b166-4d73-8873-9888458708d4" />
 
 *Hero Landing Page: Hand-painted Kerala comedy poster typography ("URULAKKUPPERI" / "ഉരുളക്കുപ്പേരി"), character selection cards, and debate controls.*
@@ -71,6 +71,10 @@ For Software:
 <img width="1530" height="722" alt="Screenshot 2026-09-12 034304" src="https://github.com/user-attachments/assets/af1cb169-7d79-4154-9ad0-7b556b9ab2a2" />
 
 *Speech Interaction: Push-to-talk voice recognition (STT) with audio level waves and natural Malayalam/Manglish speech output (TTS).*
+
+<img width="1523" height="720" alt="Screenshot 2026-09-12 034359" src="https://github.com/user-attachments/assets/58b2a978-43ed-4ae1-b5b3-18bc14d9b4e7" />
+
+“A tongue-in-cheek certificate generated after surviving an argument with URULAKKUPPERI.”
 
 # Diagrams
 ![Workflow](https://mermaid.ink/img/pako:eNptkctuwjAMhl_F8nkh-wAuVFs3aEKbxoWbh5Dk0FppkzhJjWrfvZSmjZOm9if_f7a_bE5VJY1Fv9Pq5Kxgd_Q4Ojhj7w4jFzrn9u7gC08s9f61b17qFvhR021v3vI84G5YF_iX5954N76yG-5m3r111jM_031lD_T_W_v1v7q-4b-1z563H_V3Xv3w1-rfP-7b78_b7_X9e__-e-_eew_4e_gE8_gL1w?type=png)
