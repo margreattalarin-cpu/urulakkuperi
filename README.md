@@ -6,13 +6,13 @@
 
 
 ## Basic Details
-### Team Name: [Team Name]
+### Team Name:pointless
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+
+- Member 1: Talarin Miranda- SNMIMT Maliankara
+- Member 2: Sayoojya K.S- SNMIMT MaliankaraSNMIMT Maliankara
 
 ### Project Description
 URULAKKUPPERI is a satirical Kerala debate comedy web application where users can state any opinion, only to be relentlessly contradicted by stubborn Malayali AI archetypes (Ammachi, WhatsApp Uncle, Judgemental Aunty, Bangalore Tech Bro, and Cynical Cinema Critic). It features real-time browser voice input (Speech-to-Text) and natural Malayalam/Manglish speech synthesis (TTS), wrapped in a vibrant retro Kerala tea-shop comic aesthetic.
