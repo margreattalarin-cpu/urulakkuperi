@@ -60,8 +60,8 @@ npm run dev
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](<img width="1526" height="722" alt="Screenshot 2026-09-12 033932" src="https://github.com/user-attachments/assets/25d7df80-596f-4c77-afcf-6b298147cf16" />
-)
+<img width="1526" height="722" alt="Screenshot 2026-09-12 033932" src="https://github.com/user-attachments/assets/db514f86-b166-4d73-8873-9888458708d4" />
+
 *Hero Landing Page: Hand-painted Kerala comedy poster typography ("URULAKKUPPERI" / "ഉരുളക്കുപ്പേരി"), character selection cards, and debate controls.*
 
 ![Screenshot2](<img width="1532" height="707" alt="Screenshot 2026-09-12 033954" src="https://github.com/user-attachments/assets/a1a74f2b-73ff-4f0c-878e-d5eafd577027" />
