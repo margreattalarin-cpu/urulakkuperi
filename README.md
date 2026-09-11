@@ -64,8 +64,8 @@ For Software:
 
 *Hero Landing Page: Hand-painted Kerala comedy poster typography ("URULAKKUPPERI" / "ഉരുളക്കുപ്പേരി"), character selection cards, and debate controls.*
 
-![Screenshot2](<img width="1532" height="707" alt="Screenshot 2026-09-12 033954" src="https://github.com/user-attachments/assets/a1a74f2b-73ff-4f0c-878e-d5eafd577027" />
-)
+<img width="1532" height="707" alt="Screenshot 2026-09-12 033954" src="https://github.com/user-attachments/assets/e4ac76cc-fca0-45e9-844f-11e9ede8f8ca" />
+
 *Live Argument Arena: WhatsApp-style casual debate screen with dynamic stubbornness meter (88%), confidence tracker, and real-time fallacy tagging ("Unverified UNESCO Forward").*
 
 <img width="1530" height="722" alt="Screenshot 2026-09-12 034304" src="https://github.com/user-attachments/assets/af1cb169-7d79-4154-9ad0-7b556b9ab2a2" />
