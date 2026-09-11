@@ -12,7 +12,7 @@
 ### Team Members
 
 - Member 1: Talarin Miranda- SNMIMT Maliankara
-- Member 2: Sayoojya K.S- SNMIMT MaliankaraSNMIMT Maliankara
+- Member 2: Sayoojya K.S-SNMIMT Maliankara
 
 ### Project Description
 URULAKKUPPERI is a satirical Kerala debate comedy web application where users can state any opinion, only to be relentlessly contradicted by stubborn Malayali AI archetypes (Ammachi, WhatsApp Uncle, Judgemental Aunty, Bangalore Tech Bro, and Cynical Cinema Critic). It features real-time browser voice input (Speech-to-Text) and natural Malayalam/Manglish speech synthesis (TTS), wrapped in a vibrant retro Kerala tea-shop comic aesthetic.
@@ -60,10 +60,12 @@ npm run dev
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](docs/screenshots/01_landing_page.jpg)
+![Screenshot1](<img width="1526" height="722" alt="Screenshot 2026-09-12 033932" src="https://github.com/user-attachments/assets/25d7df80-596f-4c77-afcf-6b298147cf16" />
+)
 *Hero Landing Page: Hand-painted Kerala comedy poster typography ("URULAKKUPPERI" / "ഉരുളക്കുപ്പേരി"), character selection cards, and debate controls.*
 
-![Screenshot2](docs/screenshots/02_debate_arena.jpg)
+![Screenshot2](<img width="1532" height="707" alt="Screenshot 2026-09-12 033954" src="https://github.com/user-attachments/assets/a1a74f2b-73ff-4f0c-878e-d5eafd577027" />
+)
 *Live Argument Arena: WhatsApp-style casual debate screen with dynamic stubbornness meter (88%), confidence tracker, and real-time fallacy tagging ("Unverified UNESCO Forward").*
 
 ![Screenshot3](docs/screenshots/03_voice_tts.jpg)
