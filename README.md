@@ -1,74 +1,107 @@
 <img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
+
+
 # URULAKKUPPERI (ഉരുളക്കുപ്പേരി) 🎯
-> *"Where every opinion is wrong."*
+
 
 ## Basic Details
-### Team Name: URULAKKUPPERI
+### Team Name: [Team Name]
+
+
+### Team Members
+- Team Lead: [Name] - [College]
+- Member 2: [Name] - [College]
+- Member 3: [Name] - [College]
 
 ### Project Description
-A satirical Kerala debate comedy web application where you can argue any opinion against stubborn Malayali AI archetypes (Ammachi, WhatsApp Uncle, Judgemental Aunty, Bangalore Tech Bro, Cynical Cinema Critic, etc.). Features real-time browser speech recognition (voice input) and natural Malayalam/Manglish speech synthesis (TTS).
+URULAKKUPPERI is a satirical Kerala debate comedy web application where users can state any opinion, only to be relentlessly contradicted by stubborn Malayali AI archetypes. It features real-time voice input (Speech-to-Text) and natural Malayalam/Manglish speech synthesis (TTS) wrapped in a vibrant, retro Kerala tea-shop comic aesthetic.
 
 ### The Problem (that doesn't exist)
-People in real life and Kerala family WhatsApp groups actually expect rational, calm, open-minded conversations where the other party admits you have a good point.
+People in real life and Kerala family WhatsApp groups actually expect rational, calm, open-minded debates where the other person listens to reason, concedes mistakes, and changes their mind.
 
 ### The Solution (that nobody asked for)
-URULAKKUPPERI: An AI argument engine that refuses to agree with you under any circumstances. No matter what opinion you hold, the AI contradicts you with relentless stubbornness, moves the goalposts, cites ridiculous WhatsApp forwards, and claps back with punchy, sarcastic Kerala comebacks (strictly under 30 words) spoken aloud in natural conversational Malayalam or Manglish.
-
----
+An AI argument simulator that guarantees 100% contrarian defiance. No matter how logical your point is, the AI will reject your premise, move the goalposts, cite unverified WhatsApp University forwards, and clap back with punchy 1-2 sentence Malayalam or Manglish comebacks spoken aloud with authentic Kerala pronunciation.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- **Languages**: TypeScript, JavaScript, HTML5, CSS3
-- **Frontend Framework**: React 19, Vite, Tailwind CSS
-- **Backend Framework**: Node.js, Express.js
-- **AI Integration**: Google Gemini API (`@google/genai`)
-- **Speech Technologies**: Web Speech API (`SpeechRecognition` for voice input, `SpeechSynthesis` for Malayalam/Manglish speech output)
-- **UI & Animation**: Lucide React, Canvas Confetti
+- Languages: TypeScript, JavaScript, HTML5, CSS3
+- Frameworks: React 19, Vite, Express.js
+- Libraries: `@google/genai` (Google Gemini API), Lucide React, Canvas Confetti, Tailwind CSS
+- Tools: Web Speech API (`SpeechRecognition` & `SpeechSynthesis`), PostCSS
 
----
+For Hardware:
+- *N/A (Pure Software Web Application)*
 
-## Key Features
-- **Satirical Malayali Archetypes**:
-  - **Ammachi**: Nostalgic matriarch who guilt-trips and compares everything to *"njangalude kaalathu"*.
-  - **WhatsApp Uncle**: Dean of WhatsApp University citing unverified NASA/UNESCO forwards.
-  - **Judgemental Aunty**: Passive-aggressive relative comparing you to Sharmaji's son in Dubai.
-  - **Bangalore Tech Bro**: Jargon-spewing founder talking about synergy, 10M DAUs, and pivots.
-  - **Cynical Cinema Critic**: Dissects commercial hits and declares all popular movies derivative.
-- **Natural Malayalam/Manglish TTS**:
-  - Automatically routes Malayalam script to Malayalam-capable neural voices (`ml-IN`).
-  - Routes Manglish conversations to Indian English phonetics (`en-IN`).
-  - Preserves standard English speech synthesis for English debates.
-- **Voice Input (Speech-to-Text)**: Push-to-talk mic button for speech input directly in browser.
-- **Kerala Retro Visual Identity**: Hand-painted comic poster typography, tea-shop warmth, vibrant colors.
-
----
-
-## Implementation
-### Installation
+### Implementation
+For Software:
+# Installation
 ```bash
 git clone https://github.com/margreattalarin-cpu/useless_project_temp.git
 cd useless_project_temp
 npm install
 ```
 
-### Environment Setup
-Create a `.env` file in the root directory (see `.env.example`):
-```env
-PORT=3001
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-
-### Run Locally
+# Run
 ```bash
+# Start backend server and Vite client concurrently
 npm run dev
 ```
-- Web Client: `http://localhost:5173`
-- Backend Server: `http://localhost:3001`
+
+### Project Documentation
+For Software:
+
+# Screenshots (Add at least 3)
+![Screenshot1](Add screenshot 1 here with proper name)
+*Hero Landing Page: Hand-painted Kerala comedy poster typography, character selection, and audio controls.*
+
+![Screenshot2](Add screenshot 2 here with proper name)
+*Live Argument Arena: WhatsApp-style casual debate, dynamic stubbornness tracking, and humorous fallacy tagging.*
+
+![Screenshot3](Add screenshot 3 here with proper name)
+*Speech Interaction: Push-to-talk voice input (STT) and natural Malayalam/Manglish speech synthesis (TTS).*
+
+# Diagrams
+```mermaid
+graph TD
+    A[User Voice Input / Text] --> B[Browser SpeechRecognition / Input Field]
+    B --> C[Vite Frontend React App]
+    C -->|POST /api/argument| D[Node.js Express Backend]
+    D --> E[Gemini AI Multi-Model Engine]
+    E -->|Structured Satirical Comeback| D
+    D -->|JSON: Claim, Fallacy, Counterargument| C
+    C --> F[Chat UI & Animated Metrics]
+    C --> G[Intelligent TTS Voice Router]
+    G -->|Malayalam Script| H[ml-IN Neural Voice]
+    G -->|Manglish| I[en-IN Indian English Voice]
+    G -->|English| J[en-US Character Voice]
+```
+*Architecture & Data Workflow: From user speech input to Gemini contrarian logic, culminating in intelligent script-aware TTS synthesis.*
+
+For Hardware:
+
+# Schematic & Circuit
+*N/A (Software Project)*
+
+# Build Photos
+*N/A (Software Project)*
+
+### Project Demo
+# Video
+[Add your demo video link here]
+*Demonstrates starting a debate, voice recognition, real-time Gemini contrarian comebacks, and Malayalam speech synthesis.*
+
+# Additional Demos
+- Web Application Local Preview: `http://localhost:5173`
+- Backend Health Endpoint: `http://localhost:3001/api/health`
+
+## Team Contributions
+- [Team Lead Name]: [Full-stack architecture, Gemini AI integration, Malayalam/Manglish TTS engine, UI styling]
+- [Member 2 Name]: [Voice input implementation, character prompts design, testing]
+- [Member 3 Name]: [Documentation, asset design, audio effects]
 
 ---
-
 Made with ❤️ at TinkerHub Useless Projects 
 
 ![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
