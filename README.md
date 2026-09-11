@@ -61,25 +61,6 @@ For Software:
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
 ### Project Demo
 # Video
 [Add your demo video link here]
@@ -89,9 +70,9 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- [Talarin Mranda]: [ Full-stack architecture, Gemini AI integration, conversational AI logic, character/personality system, conversation memory, stubbornness & escalation mechanics, Malayalam/Manglish support, voice interaction, and UI/UX implementation.]
+- [Sayoojya K S]: [Character and prompt design, testing and debugging, response refinement, documentation, and presentation/demo preparation.]
+  
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
