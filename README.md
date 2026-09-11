@@ -105,7 +105,9 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+[   https://drive.google.com/file/d/1QpCwRxAfZzLicAVv_PtYSCN5huJ1OTKw/view?usp=sharing
+
+]
 *Demonstrates starting a debate, voice recognition, real-time Gemini contrarian comebacks, and Malayalam speech synthesis.*
 
 # Additional Demos
