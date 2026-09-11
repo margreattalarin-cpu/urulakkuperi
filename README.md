@@ -68,7 +68,8 @@ For Software:
 )
 *Live Argument Arena: WhatsApp-style casual debate screen with dynamic stubbornness meter (88%), confidence tracker, and real-time fallacy tagging ("Unverified UNESCO Forward").*
 
-![Screenshot3](docs/screenshots/03_voice_tts.jpg)
+<img width="1530" height="722" alt="Screenshot 2026-09-12 034304" src="https://github.com/user-attachments/assets/af1cb169-7d79-4154-9ad0-7b556b9ab2a2" />
+
 *Speech Interaction: Push-to-talk voice recognition (STT) with audio level waves and natural Malayalam/Manglish speech output (TTS).*
 
 # Diagrams
