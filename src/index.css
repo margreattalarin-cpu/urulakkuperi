@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-maroon-dark: #170407;
+    --bg-maroon-base: #22070D;
+    --bg-maroon-card: #2D0B12;
+    --bg-maroon-elevated: #3A0F18;
+    --text-cream-bright: #FFFDF7;
+    --text-cream-warm: #FEEBC8;
+    --text-cream-muted: #D4A373;
+    --turmeric-yellow: #F59E0B;
+    --turmeric-light: #FBBF24;
+    --burnt-orange: #EA580C;
+    --terracotta: #C2410C;
+    --kerala-green: #15803D;
+    --kerala-green-bright: #22C55E;
+    --kasavu-gold: #D4AF37;
+    --dark-brown: #160709;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #170407;
+    color: #FFFDF7;
+    font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(ellipse at 85% 10%, rgba(234, 88, 12, 0.22) 0%, transparent 45%),
+      radial-gradient(ellipse at 15% 90%, rgba(21, 128, 61, 0.2) 0%, transparent 45%),
+      radial-gradient(circle at 50% 30%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
+      radial-gradient(rgba(245, 158, 11, 0.08) 1.2px, transparent 1.2px),
+      linear-gradient(170deg, #160406 0%, #24080E 35%, #1B060B 70%, #100204 100%);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 26px 26px, 100% 100%;
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
+    background-attachment: fixed;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Custom 5-Font Typography System */
+.font-comic-title {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.font-malayalam-title {
+  font-family: 'Noto Sans Malayalam', sans-serif;
+  font-weight: 800;
+}
+
+.font-editorial-tagline {
+  font-family: 'Bree Serif', Georgia, serif;
+}
+
+.font-ui-body {
+  font-family: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-sarcastic-hand {
+  font-family: 'Patrick Hand', cursive;
+}
+
+/* Backwards compatibility */
+.font-desi-display {
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.font-desi-serif {
+  font-family: 'Bree Serif', Georgia, serif;
+}
+
+/* Hand-painted Comic Hero Logo Style */
+.comic-logo-hero {
+  font-family: 'Luckiest Guy', cursive;
+  color: #FFC72C;
+  letter-spacing: 0.035em;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 4px #1A0508;
+  text-shadow:
+    0 3px 0 #991B1B,
+    0 6px 0 #7F1D1D,
+    0 8px 0 #5C1523,
+    0 10px 0 #1A0508,
+    0 14px 20px rgba(0, 0, 0, 0.7);
+  display: inline-block;
+}
+
+@media (min-width: 640px) {
+  .comic-logo-hero {
+    -webkit-text-stroke: 6px #1A0508;
+    text-shadow:
+      0 4px 0 #991B1B,
+      0 8px 0 #7F1D1D,
+      0 11px 0 #5C1523,
+      0 13px 0 #1A0508,
+      0 18px 26px rgba(0, 0, 0, 0.75);
+  }
+}
+
+/* Warm Paper / Kerala Tea-Shop Canvas (Landing Page) */
+.paper-warm-bg {
+  background-color: #FAF5EB;
+  color: #26160C;
+  background-image:
+    radial-gradient(#E8DFC9 0.85px, transparent 0.85px),
+    radial-gradient(#E8DFC9 0.85px, #FAF5EB 0.85px);
+  background-size: 26px 26px;
+  background-position: 0 0, 13px 13px;
+}
+
+/* Hand-painted Comic Button Styles */
+.comic-btn-primary {
+  box-shadow: 0 4px 0 #26160C, 0 8px 16px rgba(44, 24, 16, 0.16);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.comic-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #26160C, 0 10px 20px rgba(44, 24, 16, 0.2);
+}
+.comic-btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #26160C, 0 4px 8px rgba(44, 24, 16, 0.12);
+}
+
+.comic-btn-secondary {
+  box-shadow: 0 3px 0 #26160C, 0 6px 12px rgba(44, 24, 16, 0.08);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.comic-btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 0 #26160C, 0 8px 14px rgba(44, 24, 16, 0.12);
+}
+.comic-btn-secondary:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #26160C, 0 2px 4px rgba(44, 24, 16, 0.06);
+}
+
+/* Kasavu Gold Woven Border Accent */
+.kasavu-gold-strip {
+  background: linear-gradient(90deg, #D4AF37 0%, #FEE589 20%, #EA580C 40%, #D4AF37 60%, #15803D 80%, #D4AF37 100%);
+  height: 4px;
+  width: 100%;
+  box-shadow: 0 1px 8px rgba(245, 158, 11, 0.4);
+}
+
+.kasavu-gold-border {
+  border-image: linear-gradient(135deg, #F59E0B, #EA580C, #D4AF37, #15803D) 1;
+}
+
+/* Deep Spice Card Shadows & Glows */
+.spice-card {
+  background-color: #280A10;
+  border: 2px solid #5C1523;
+  box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(234, 88, 12, 0.08);
+}
+
+.spice-card-elevated {
+  background-color: #340E16;
+  border: 2px solid #781E30;
+  box-shadow: 0 12px 36px -4px rgba(0, 0, 0, 0.7), 0 4px 14px rgba(245, 158, 11, 0.12);
+}
+
+.spice-card-gold {
+  background-color: #2D0B12;
+  border: 2px solid #D4AF37;
+  box-shadow: 0 10px 32px -4px rgba(212, 175, 55, 0.25), 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.spice-glow-orange {
+  box-shadow: 0 0 25px rgba(234, 88, 12, 0.35);
+}
+
+.spice-glow-gold {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+}
+
+.spice-glow-green {
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.35);
+}
+
+/* WhatsApp / Kerala Contrarian Chat Bubble Shapes */
+.bubble-tail-right::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -8px;
+  width: 12px;
+  height: 12px;
+  background-color: inherit;
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+.bubble-tail-left::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -8px;
+  width: 12px;
+  height: 12px;
+  background-color: inherit;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+/* Animated shimmer for Urulakkupperi hero masthead */
+@keyframes spiceShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.text-spice-shimmer {
+  background: linear-gradient(90deg, #FBBF24 0%, #EA580C 25%, #F59E0B 50%, #22C55E 75%, #FBBF24 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: spiceShimmer 6s linear infinite;
+}
+
+/* Unhinged Shake Animation for meltdowns */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.unhinged-shake {
+  animation: shake 0.35s infinite;
+}
+
+/* Custom Vibrant Spice Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #170407;
+}
+::-webkit-scrollbar-thumb {
+  background: #781E30;
+  border-radius: 9999px;
+  border: 1px solid #3A0F18;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #EA580C;
+}
