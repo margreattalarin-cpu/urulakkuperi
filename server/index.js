@@ -141,8 +141,12 @@ app.post('/api/config/key', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  const hasKey = Boolean(process.env.GEMINI_API_KEY || process.env.GROQ_API_KEY || process.env.OPENAI_API_KEY);
-  console.log(`[SHERIKKUM Backend] Server running on http://localhost:${PORT}`);
-  console.log(`[SHERIKKUM Backend] LLM Status: ${hasKey ? 'API Key Configured' : 'NO API KEY SET (Needs GEMINI_API_KEY, GROQ_API_KEY, or OPENAI_API_KEY)'}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    const hasKey = Boolean(process.env.GEMINI_API_KEY || process.env.GROQ_API_KEY || process.env.OPENAI_API_KEY);
+    console.log(`[SHERIKKUM Backend] Server running on http://localhost:${PORT}`);
+    console.log(`[SHERIKKUM Backend] LLM Status: ${hasKey ? 'API Key Configured' : 'NO API KEY SET (Needs GEMINI_API_KEY, GROQ_API_KEY, or OPENAI_API_KEY)'}`);
+  });
+}
+
+export default app;
