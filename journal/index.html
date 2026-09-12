@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>URULAKKUPPERI (ഉരുളക്കുപ്പേരി) — Project Journal | TinkerHub Useless Projects 3.0</title>
-  <meta name="description" content="The making of a completely unnecessary AI: A chronological, humorous, and technical build diary of URULAKKUPPERI, an AI argument simulator that refuses to agree with anyone." />
+  <meta name="description" content="The making of a completely unnecessary AI: A storytelling project journal chronicling URULAKKUPPERI, an AI argument simulator built for TinkerHub Useless Projects 3.0." />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -21,25 +21,28 @@
   <nav class="top-nav">
     <a href="#" class="nav-brand">
       <span class="nav-logo-text">URULAKKUPPERI</span>
-      <span class="nav-badge">Build Diary 🌶️</span>
+      <span class="nav-badge">Makeathon Journal 🌶️</span>
     </a>
     <div class="nav-links">
-      <a href="#section-01">01 The Idea</a>
-      <a href="#section-04">04 Gemini</a>
-      <a href="#section-06">06 Voice</a>
-      <a href="#section-08">08 UI</a>
-      <a href="#section-12">12 Learnings</a>
-      <a href="#section-13">13 Team</a>
-      <a href="#section-14" class="nav-btn">Live Demo →</a>
+      <a href="#terrible-idea">01 The Origin</a>
+      <a href="#evolution">02 Evolution</a>
+      <a href="#characters">03 Characters</a>
+      <a href="#brain">04 Gemini Brain</a>
+      <a href="#disasters">05 Breakdowns</a>
+      <a href="#stubbornness">06 Escalation</a>
+      <a href="#talk">07 Voice</a>
+      <a href="#showcase">08 The App</a>
+      <a href="#team">09 Team</a>
+      <a href="../index.html" class="nav-cta-btn">Enter The Argument 🔥</a>
     </div>
   </nav>
 
   <div class="container">
 
     <!-- ===================================================================
-         HERO SECTION
+         1. HERO
          =================================================================== -->
-    <header class="hero">
+    <header class="hero" id="hero">
       <div class="event-pill">
         <span>TinkerHub Useless Projects 3.0</span> • <span>Project Journal</span>
       </div>
@@ -47,634 +50,680 @@
       <div class="hero-title-group">
         <h1 class="hero-main-title">URULAKKUPPERI</h1>
         <div class="hero-malayalam">ഉരുളക്കുപ്പേരി</div>
-        <div class="hero-tagline">"Where every opinion is wrong."</div>
-        <div class="hero-subtitle">THE MAKING OF A COMPLETELY UNNECESSARY AI.</div>
+        <div class="hero-tagline-primary">"Where every opinion is wrong."</div>
+        <div class="hero-tagline-secondary">"Say it. We'll argue."</div>
       </div>
+
+      <p class="hero-desc">
+        An aggressively contrarian AI built with Google Gemini, browser speech synthesis, and zero intention of agreeing with anything you say.
+      </p>
 
       <div class="hero-hand-note">
-        <span class="hand-note">"we probably could have built something useful."</span>
+        <span class="hand-note">"✎ We spent 48 hours teaching an LLM to argue like a stubborn Kerala relative."</span>
       </div>
 
-      <div class="hero-cta">
-        <a href="#section-01" class="start-reading-btn">
-          START READING ↓
+      <div class="hero-cta-group">
+        <a href="../index.html" class="btn-primary-large">
+          ENTER THE ARGUMENT 🔥
         </a>
+        <a href="#terrible-idea" class="btn-secondary-large">
+          EXPLORE THE STORY ↓
+        </a>
+      </div>
+
+      <!-- METADATA BAR -->
+      <div class="meta-bar">
+        <div class="meta-item">
+          <div class="meta-label">Project</div>
+          <div class="meta-val">URULAKKUPPERI 🎯</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Makeathon</div>
+          <div class="meta-val">Useless Projects 3.0</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Engine</div>
+          <div class="meta-val">Gemini 3.1 + Web Speech</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Productivity</div>
+          <div class="meta-val" style="color: var(--color-green);">0% Useful • 100% Working</div>
+        </div>
       </div>
     </header>
 
-    <!-- METADATA BAR -->
-    <div class="meta-bar">
-      <div class="meta-item">
-        <div class="meta-label">Project</div>
-        <div class="meta-val">URULAKKUPPERI 🎯</div>
-      </div>
-      <div class="meta-item">
-        <div class="meta-label">Team Members</div>
-        <div class="meta-val">Talarin Miranda & Sayoojya KS</div>
-      </div>
-      <div class="meta-item">
-        <div class="meta-label">Event</div>
-        <div class="meta-val">Useless Projects 3.0</div>
-      </div>
-      <div class="meta-item">
-        <div class="meta-label">Status</div>
-        <div class="meta-val" style="color: var(--color-green);">100% Useless & Working</div>
-      </div>
-    </div>
-
     <!-- ===================================================================
-         01 — THE TERRIBLE IDEA
+         2. THE TERRIBLE IDEA
          =================================================================== -->
-    <article class="journal-section" id="section-01">
-      <div class="section-tag">01 — THE TERRIBLE IDEA</div>
-      <h2 class="section-title">We Needed a <span class="highlight">Useless Project.</span></h2>
+    <article class="journal-section" id="terrible-idea">
+      <div class="section-tag">01 • THE TERRIBLE IDEA</div>
+      <h2 class="section-title">We Had Exactly One Job: <span class="highlight">Build Something Useless.</span></h2>
       <div class="section-body">
-        <p>We had exactly one job: build something useless.</p>
-        <p>In a tech world saturated with SaaS startups promising to 10x your productivity, automate your taxes, and summarize 20-page PDFs into bullet points, we felt a moral obligation to do the exact opposite. We wanted to build something that actively subtracts value from your day.</p>
-        <p>So naturally, we decided to make an AI that refuses to agree with people.</p>
-        <p>The original concept started as a shockingly basic prototype codenamed <strong>"NUH-UH"</strong> — a chatbot that blindly replied <em>"No you're wrong"</em> or <em>"I disagree"</em> regardless of what you typed. If you said <em>"The earth revolves around the sun"</em>, it hit you with a cold, uninspired <em>"Nuh-uh"</em>.</p>
-        <p>It was useless, sure. But it was boring.</p>
-        <p>Then late into the evening, the concept evolved into something infinitely more chaotic: <strong>URULAKKUPPERI</strong> (Malayalam for hot spicy potato fry — colloquial Kerala slang for an instant, sharp, razor-tongued verbal clapback). Instead of just saying "no", what if the AI actually read your argument, detected the exact premise you were asserting, and generated an absurdly stubborn, hyper-specific Kerala counterargument?</p>
+        <div class="section-lead">
+          In a world obsessed with 10x productivity tools, we felt a moral obligation to build software that actively subtracts value from your day.
+        </div>
+
+        <p>
+          Every startup in 2024 is promising to summarize your 40-page PDFs, schedule your meetings, or automate your taxes. Nobody was asking the real question: <em>where is the AI that calls you an idiot when you state that water is wet?</em>
+        </p>
+
+        <p>
+          The original prototype began as a rudimentary script codenamed <strong>"NUH-UH.exe"</strong>. It was a dumb chatbot that blindly replied <em>"No you're wrong"</em> regardless of what you typed. Tell it the sky is blue? <em>"Nuh-uh."</em> Tell it gravity exists? <em>"Wrong."</em>
+        </p>
+
+        <p>
+          It was useless, certainly. But it was boring. A five-year-old can say "nuh-uh". A true contrarian argument in Kerala is a high-stakes cultural performance—fueled by scalding black tea, unfounded confidence, and references to unverified WhatsApp forwards.
+        </p>
 
         <div class="sticky-card tape-top">
           <p class="hand-note">"Step 1: Have a bad idea.<br>Step 2: Take it dangerously seriously."</p>
         </div>
 
+        <p>
+          That late-night epiphany gave birth to <strong>URULAKKUPPERI</strong> (Malayalam for hot spicy potato fry—Kerala slang for an instant, razor-sharp, unapologetic clapback).
+        </p>
       </div>
     </article>
 
     <!-- ===================================================================
-         02 — TEACHING AI TO ARGUE
+         3. THE IDEA EVOLVED
          =================================================================== -->
-    <article class="journal-section" id="section-02">
-      <div class="section-tag">02 — TEACHING AI TO ARGUE</div>
-      <h2 class="section-title">Apparently, Saying 'No' <span class="highlight">Isn't Arguing.</span></h2>
+    <article class="journal-section" id="evolution">
+      <div class="section-tag">02 • THE EVOLUTION</div>
+      <h2 class="section-title">Saying 'No' Isn't Arguing. <span class="highlight">This Is Art.</span></h2>
       <div class="section-body">
-        <p>Building an argumentative AI sounded deceptively simple: <em>"Just tell the LLM to disagree!"</em></p>
-        <p>Except within thirty minutes of testing, we encountered our first major technical wall. If you simply tell an LLM to disagree, it either gets confused, starts hallucinating contradictory facts, agrees halfway through the sentence (<em>"You make a good point, however..."</em>), or collapses into robotic nonsense.</p>
-        <p>A real human argument is an art form — especially in Kerala. To make URULAKKUPPERI feel alive, the system needed to:</p>
-        <ul style="margin-left: 24px; margin-bottom: 18px;">
-          <li><strong>Extract the Core Claim:</strong> Isolate the exact premise being defended (e.g. <em>"Cats > Dogs"</em>).</li>
-          <li><strong>Generate Contextual Counterarguments:</strong> Contradict the specific premise using humorous logic or absurd analogies.</li>
-          <li><strong>Stay in Character:</strong> Speak in authentic archetypal voices with distinct regional cadence.</li>
-          <li><strong>Maintain Conversational Memory:</strong> Catch the user contradicting themselves across multiple turns.</li>
-          <li><strong>Escalate Stubbornness:</strong> Refuse to budge as the debate gets longer.</li>
-        </ul>
+        <div class="section-lead">
+          To truly irritate someone, you cannot just negate their claim. You have to deconstruct their claim, flip the premise, and attack their logic with absurd confidence.
+        </div>
 
-        <p>To ground the debate in recognizable Kerala archetypes, we engineered <strong>6 distinct argumentative personalities</strong>:</p>
+        <p>
+          We quickly realized that dumb contradiction feels hollow. Human arguments work because the opponent actually hears your point, finds the flimsiest possible angle to exploit, and turns it against you.
+        </p>
+
+        <p>
+          We upgraded URULAKKUPPERI from a blunt negation bot into a contextual argument synthesizer:
+        </p>
+
+        <div class="evolution-comparison">
+          <div class="evolution-card dumb">
+            <div class="evolution-header">
+              <span>DUMB NEGATION BOT</span>
+              <span class="evolution-pill">Version 0.1</span>
+            </div>
+            <div class="evolution-dialogue">
+              <strong>User:</strong> "Biriyani is better than fried rice."<br>
+              <strong>Bot:</strong> "No it isn't. You are wrong."
+            </div>
+            <div class="evolution-verdict">
+              😴 Verdict: Lazy, predictable, robotic.
+            </div>
+          </div>
+
+          <div class="evolution-card smart">
+            <div class="evolution-header">
+              <span>URULAKKUPPERI ENGINE</span>
+              <span class="evolution-pill">Final Version</span>
+            </div>
+            <div class="evolution-dialogue">
+              <strong>User:</strong> "Biriyani is better than fried rice."<br>
+              <strong>WhatsApp Uncle:</strong> "That's what someone with questionable food choices would say. UNESCO verified that fried rice improves mental discipline! 🤦‍♂️"
+            </div>
+            <div class="evolution-verdict" style="color: var(--color-green);">
+              🔥 Verdict: Culturally grounded, unhinged, devastating.
+            </div>
+          </div>
+        </div>
+
+        <p>
+          By teaching the AI to extract premises and assign satirical logical fallacies, every debate became a personalized masterclass in stubbornness.
+        </p>
+      </div>
+    </article>
+
+    <!-- ===================================================================
+         4. WE GAVE IT PERSONALITIES
+         =================================================================== -->
+    <article class="journal-section" id="characters">
+      <div class="section-tag">03 • THE OPPONENTS</div>
+      <h2 class="section-title">We Gave It Personalities. <span class="highlight">Six Of Them.</span></h2>
+      <div class="section-body">
+        <div class="section-lead">
+          Nobody argues in a vacuum. Disagreements take their flavor from who is yelling at you.
+        </div>
+
+        <p>
+          We engineered <strong>six distinct Kerala archetypes</strong>, each backed by custom system prompt instructions, emotional triggers, idioms, and speech configurations:
+        </p>
 
         <div class="characters-grid">
+          <!-- 1. Ammachi -->
           <div class="char-card">
-            <div class="char-header">
-              <div class="char-avatar">👵</div>
-              <div>
-                <div class="char-name">Ammachi</div>
-                <div class="char-role">The Nostalgic Matriarch</div>
+            <div>
+              <div class="char-header">
+                <div class="char-avatar">👵</div>
+                <div>
+                  <div class="char-name">Ammachi</div>
+                  <div class="char-role">The Nostalgic Matriarch</div>
+                </div>
+              </div>
+              <div class="char-quote">"Njangalude kaalathu..."</div>
+              <div class="char-desc">
+                Warm on the surface, ruthless underneath. Convinced modern convenience is ruining morality. Compares your life directly to 1968.
               </div>
             </div>
-            <div class="char-quote">"Njangalude kaalathu..."</div>
-            <div class="char-desc">Warm on the surface, ruthless underneath. Convinced modern convenience is destroying morality. Compares everything to 1968.</div>
           </div>
 
+          <!-- 2. WhatsApp Uncle -->
           <div class="char-card">
-            <div class="char-header">
-              <div class="char-avatar">🧔</div>
-              <div>
-                <div class="char-name">WhatsApp Uncle</div>
-                <div class="char-role">Dean of WhatsApp University</div>
+            <div>
+              <div class="char-header">
+                <div class="char-avatar">🧔</div>
+                <div>
+                  <div class="char-name">WhatsApp Uncle</div>
+                  <div class="char-role">Dean of Forward University</div>
+                </div>
+              </div>
+              <div class="char-quote">"Actually, scientifically speaking..."</div>
+              <div class="char-desc">
+                Cites unverified NASA findings, secret German studies, and morning-walk breakthroughs. Has never admitted defeat in human history.
               </div>
             </div>
-            <div class="char-quote">"Actually, scientifically speaking..."</div>
-            <div class="char-desc">Cites unverified NASA reports, secret German studies, and forwarded messages from retired ISRO scientists. Never loses.</div>
           </div>
 
+          <!-- 3. Judgemental Aunty -->
           <div class="char-card">
-            <div class="char-header">
-              <div class="char-avatar">👩</div>
-              <div>
-                <div class="char-name">Judgemental Aunty</div>
-                <div class="char-role">Chief Gossip Officer</div>
+            <div>
+              <div class="char-header">
+                <div class="char-avatar">👩</div>
+                <div>
+                  <div class="char-name">Judgemental Aunty</div>
+                  <div class="char-role">Chief Gossip Officer</div>
+                </div>
+              </div>
+              <div class="char-quote">"Njan parayunnilla, but..."</div>
+              <div class="char-desc">
+                Master of passive-aggressive sympathy. Seamlessly compares your career choices to Sharmaji's son who got promoted three times in Dubai.
               </div>
             </div>
-            <div class="char-quote">"Njan parayunnilla, but..."</div>
-            <div class="char-desc">Passive-aggressive shade master. Compares your life choices directly to Sharmaji's son who got promoted three times in Dubai.</div>
           </div>
 
+          <!-- 4. Bangalore Tech Bro -->
           <div class="char-card">
-            <div class="char-header">
-              <div class="char-avatar">🧑‍💻</div>
-              <div>
-                <div class="char-name">Bangalore Tech Bro</div>
-                <div class="char-role">VC-Backed Opinion Haver</div>
+            <div>
+              <div class="char-header">
+                <div class="char-avatar">🧑‍💻</div>
+                <div>
+                  <div class="char-name">Bangalore Tech Bro</div>
+                  <div class="char-role">VC-Backed Opinion Haver</div>
+                </div>
+              </div>
+              <div class="char-quote">"That's not scalable, bro."</div>
+              <div class="char-desc">
+                Refuses to argue like a human being. Replaces emotions with CAC, LTV, zero product-market fit, and pre-seed valuation buzzwords.
               </div>
             </div>
-            <div class="char-quote">"That's not scalable, bro."</div>
-            <div class="char-desc">Refuses to argue like a human. Replaces all logic with CAC, LTV, zero product-market fit, and synergy buzzwords.</div>
           </div>
 
+          <!-- 5. Average Malayali -->
           <div class="char-card">
-            <div class="char-header">
-              <div class="char-avatar">😭</div>
-              <div>
-                <div class="char-name">Average Malayali</div>
-                <div class="char-role">Tea-Stall Philosopher</div>
+            <div>
+              <div class="char-header">
+                <div class="char-avatar">😭</div>
+                <div>
+                  <div class="char-name">Average Malayali</div>
+                  <div class="char-role">Tea-Stall Philosopher</div>
+                </div>
+              </div>
+              <div class="char-quote">"Enthokkeya ee parayunne?"</div>
+              <div class="char-desc">
+                Perpetually exasperated. Disagrees with your opinion simply on the grounds that you dared to utter it aloud in public.
               </div>
             </div>
-            <div class="char-quote">"Enthokkeya ee parayunne?"</div>
-            <div class="char-desc">Perpetually exasperated. Disagrees with your opinion simply on the basis that you dared to speak it aloud.</div>
           </div>
 
+          <!-- 6. The Final Boss -->
           <div class="char-card">
-            <div class="char-header">
-              <div class="char-avatar">💀</div>
-              <div>
-                <div class="char-name">The Final Boss</div>
-                <div class="char-role">Pure Contrarian Defiance</div>
+            <div>
+              <div class="char-header">
+                <div class="char-avatar">💀</div>
+                <div>
+                  <div class="char-name">The Final Boss</div>
+                  <div class="char-role">Pure Contrarian Defiance</div>
+                </div>
+              </div>
+              <div class="char-quote">"You're wrong. Don't ask why."</div>
+              <div class="char-desc">
+                Has achieved theoretical maximum stubbornness. Rejects mathematics, gravity, and basic biology out of pure, unadulterated spite.
               </div>
             </div>
-            <div class="char-quote">"You're wrong. Don't ask why."</div>
-            <div class="char-desc">Has achieved theoretical maximum stubbornness. Rejects mathematics, gravity, and basic biology out of pure spite.</div>
           </div>
         </div>
 
+        <div class="sticky-card tape-top green">
+          <p class="hand-note" style="text-align: center;">
+            "Clicking any quote above triggers our secret audio preview test!"
+          </p>
+        </div>
       </div>
     </article>
 
     <!-- ===================================================================
-         03 — THE AI STARTED WRITING ESSAYS
+         5. THEN WE GAVE IT A BRAIN
          =================================================================== -->
-    <article class="journal-section" id="section-03">
-      <div class="section-tag">03 — THE ESSAY CRISIS</div>
-      <h2 class="section-title">Bro, We Asked For An Argument, <span class="highlight">Not A Thesis.</span></h2>
+    <article class="journal-section" id="brain">
+      <div class="section-tag">04 • THE BRAIN</div>
+      <h2 class="section-title">Then We Gave It A Brain. <span class="highlight">Enter Gemini.</span></h2>
       <div class="section-body">
-        <p>Once we hooked up the initial system prompts, the AI started arguing. The problem? It argued like a tired philosophy professor writing a peer-reviewed critique.</p>
+        <div class="section-lead">
+          Underneath the satire, URULAKKUPPERI runs on a structured AI pipeline powered by Google Gemini, strict JSON schema validation, and sliding session memory.
+        </div>
 
-        <div class="dialogue-demo-box" style="margin-bottom: 20px;">
-          <div class="dialogue-bubble user">
-            <span class="dialogue-speaker">User</span>
-            Biriyani is better than fried rice.
+        <p>
+          We didn't want random canned responses. Every single user utterance is parsed dynamically in real time:
+        </p>
+
+        <div class="pipeline-grid">
+          <div class="pipeline-step">
+            <div class="step-num">STEP 01</div>
+            <div class="step-title">Claim Deconstruction</div>
+            <div class="step-desc">Gemini extracts the underlying thesis the user is defending, isolating factual claims from emotional tone.</div>
           </div>
-          <div class="dialogue-bubble ai">
-            <span class="dialogue-speaker">Early AI Output</span>
-            While both biriyani and fried rice possess distinct culinary histories and flavour profiles that appeal to diverse regional demographics across South Asia, one must carefully consider the nuanced complexities of layered aromatics versus wok-tossed moisture balance...
+
+          <div class="pipeline-step">
+            <div class="step-num">STEP 02</div>
+            <div class="step-title">Contrarian Inversion</div>
+            <div class="step-desc">The character persona inverts the thesis, manufacturing an opposing stance grounded in regional humor.</div>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="step-num">STEP 03</div>
+            <div class="step-title">Fallacy Tagging</div>
+            <div class="step-desc">The engine invents a satirical fallacy (e.g. <em>"WhatsApp Science Distortion"</em> or <em>"Dubai Nostalgia Delusion"</em>).</div>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="step-num">STEP 04</div>
+            <div class="step-title">Memory & Escalation</div>
+            <div class="step-desc">Sliding session memory tracks previous turns, catching user contradictions and escalating the stubbornness index.</div>
           </div>
         </div>
 
-        <div class="sticky-card pink tape-top">
-          <p class="hand-note" style="font-size: 1.5rem; text-align: center;">"NO. STOP. 😭 WHO TALKS LIKE THIS IN A WHATSAPP GROUP?!"</p>
+        <div class="tech-badges-row">
+          <span class="tech-badge-pill">⚡ Google Gemini 3.1</span>
+          <span class="tech-badge-pill">🔒 Strict JSON Schema</span>
+          <span class="tech-badge-pill">🧠 Sliding History Window</span>
+          <span class="tech-badge-pill">🛡️ Server-Side Secret Isolation</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===================================================================
+         6. THEN EVERYTHING BROKE
+         =================================================================== -->
+    <article class="journal-section" id="disasters">
+      <div class="section-tag">05 • THE BATTLE SCARS</div>
+      <h2 class="section-title">Then Everything Broke. <span class="highlight">A Chronicle of Disasters.</span></h2>
+      <div class="section-body">
+        <div class="section-lead">
+          Building a useless project is easy. Building a polished useless project that survives real-time speech and LLM edge cases is pure chaos.
         </div>
 
-        <p>Nobody in a heated family discussion writes three paragraphs of balanced academic evaluation. A real argument is quick, devastating, and deeply petty.</p>
-        <p>We completely overhauled our system instructions. We enforced strict chat length guardrails:</p>
-        <ul style="margin-left: 24px; margin-bottom: 18px;">
-          <li><strong>Length:</strong> 1 to 2 short sentences ONLY.</li>
-          <li><strong>Word Count Target:</strong> 5 to 20 words (strictly under 30 words max).</li>
-          <li><strong>Cadence:</strong> Fast-paced casual chat / WhatsApp banter.</li>
-          <li><strong>Content:</strong> Immediate sarcastic clapback over gentle explanation.</li>
-        </ul>
+        <p>Here is what actually went wrong during development:</p>
 
-        <div class="comparison-box">
-          <div class="comp-card before">
-            <div class="comp-header">
-              <span>BEFORE (The Academic Essay)</span>
-              <span class="comp-badge">68 Words</span>
+        <div class="disasters-list">
+          <!-- Crisis 1 -->
+          <div class="disaster-card">
+            <div class="disaster-card-header">
+              <span class="disaster-icon">📜</span>
+              <div class="disaster-title">1. The Essay Crisis: Who Writes 3 Paragraphs on WhatsApp?</div>
             </div>
-            <div class="comp-text">
-              "It is fundamentally misguided to claim superiority for biriyani when fried rice represents an internationally celebrated balance of proteins and stir-fried grains with superior textural versatility across global dining contexts."
+            <div class="disaster-crisis">
+              Our initial prompts made Gemini act like a tired academic philosophy professor. When a user said <em>"Biriyani > Fried Rice"</em>, the AI replied with a 90-word dissertation exploring spice layering and wok moisture.
+            </div>
+            <div class="disaster-solution">
+              <strong>The Fix:</strong> Hard negative constraints: <em>"1 to 2 short sentences ONLY. Target 10–25 words. Speak like a WhatsApp voice note, not a thesis."</em>
             </div>
           </div>
-          <div class="comp-card after">
-            <div class="comp-header">
-              <span>AFTER (URULAKKUPPERI Style)</span>
-              <span class="comp-badge">11 Words</span>
+
+          <!-- Crisis 2 -->
+          <div class="disaster-card">
+            <div class="disaster-card-header">
+              <span class="disaster-icon">🚨</span>
+              <div class="disaster-title">2. The 2 AM 404 Incident: Gemini Model Deprecation</div>
             </div>
-            <div class="comp-text">
-              "Better? 😭 Fried rice has entered the chat to humble you."
+            <div class="disaster-crisis">
+              Everything was working perfectly until midnight. Suddenly, all API calls threw a fatal 404: <code>The requested model was not found for this API version</code>.
+            </div>
+
+            <!-- Terminal Error Snippet -->
+            <div class="terminal-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <div class="terminal-dot dot-red"></div>
+                  <div class="terminal-dot dot-yellow"></div>
+                  <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-title">bash — node server/index.js (2:14 AM)</div>
+              </div>
+              <div class="terminal-body">
+                <div><span class="prompt-symbol">$</span> POST /api/argument HTTP/1.1</div>
+                <div>[server] Calling Gemini API for Ammachi...</div>
+                <div class="err-highlight">[Gemini Error 404]: Model "gemini-2.5-pro" not found or deprecated.</div>
+                <div>[server] UnhandledPromiseRejection: LLM_GENERATION_FAILED</div>
+              </div>
+            </div>
+
+            <div class="disaster-solution">
+              <strong>The Fix:</strong> Rebuilt the backend architecture with resilient multi-model failover (targeting <code>gemini-3.1-pro-preview</code> with automatic fallback to <code>gemini-3.1-flash-lite</code>).
+            </div>
+          </div>
+
+          <!-- Crisis 3 -->
+          <div class="disaster-card">
+            <div class="disaster-card-header">
+              <span class="disaster-icon">🎙️</span>
+              <div class="disaster-title">3. The Microphone Dropouts & Web Speech Quirks</div>
+            </div>
+            <div class="disaster-crisis">
+              Continuous browser speech recognition frequently timed out mid-sentence, especially when users paused to think of a counter-argument.
+            </div>
+            <div class="disaster-solution">
+              <strong>The Fix:</strong> Replaced buggy auto-listen with a tactile, reliable <strong>Push-to-Talk</strong> mechanism with clear glowing feedback and graceful keyboard fallbacks.
+            </div>
+          </div>
+
+          <!-- Crisis 4 -->
+          <div class="disaster-card">
+            <div class="disaster-card-header">
+              <span class="disaster-icon">🔊</span>
+              <div class="disaster-title">4. The Malayalam TTS Pronunciation Betrayal</div>
+            </div>
+            <div class="disaster-crisis">
+              Default system voices (Microsoft David, Zira) tried pronouncing Malayalam Unicode like <code>"അതൊന്നും നടക്കില്ല"</code> using American phonetics. It sounded like an alien modem choking on a potato.
+            </div>
+            <div class="disaster-solution">
+              <strong>The Fix:</strong> Engineered a custom script router: detects Malayalam Unicode (<code>/[\u0D00-\u0D7F]/</code>) and routes to dedicated <code>ml-IN</code> / <code>en-IN</code> voices.
+            </div>
+          </div>
+
+          <!-- Crisis 5 -->
+          <div class="disaster-card">
+            <div class="disaster-card-header">
+              <span class="disaster-icon">🎨</span>
+              <div class="disaster-title">5. The UI Identity Crisis: Generic B2B SaaS Syndrome</div>
+            </div>
+            <div class="disaster-crisis">
+              Our earliest UI looked like dark-mode enterprise software designed for filing quarterly corporate tax returns. Zero warmth, zero humor.
+            </div>
+            <div class="disaster-solution">
+              <strong>The Fix:</strong> Scrapped generic templates in favor of a warm Kerala tea-shop comic aesthetic, vintage paper textures, hand-drawn tape accents, and punchy typography.
             </div>
           </div>
         </div>
-
       </div>
     </article>
 
     <!-- ===================================================================
-         04 — GEMINI ENTERS THE CHAT
+         7. WE MADE IT STUBBORN
          =================================================================== -->
-    <article class="journal-section" id="section-04">
-      <div class="section-tag">04 — GEMINI INTEGRATION</div>
-      <h2 class="section-title">We Gave It <span class="highlight">A Brain.</span></h2>
+    <article class="journal-section" id="stubbornness">
+      <div class="section-tag">06 • ESCALATION ENGINE</div>
+      <h2 class="section-title">We Made It Stubborn. <span class="highlight">0 to 100%.</span></h2>
       <div class="section-body">
-        <p>Behind the satirical curtain, URULAKKUPPERI relies on <strong>Google Gemini</strong> to power its dynamic argumentative core.</p>
-        <p>We needed a model that could process nuanced colloquial English, recognize Indian culinary and cultural references, handle code-mixed Manglish (Malayalam written in English alphabet), and reliably output strictly formatted JSON on every single exchange without breaking.</p>
-        <p>Instead of hardcoding canned comebacks, every single user argument is ingested dynamically:</p>
-        <ol style="margin-left: 24px; margin-bottom: 20px;">
-          <li><strong>Claim Deconstruction:</strong> The model extracts the underlying thesis the user is defending.</li>
-          <li><strong>Contrarian Inversion:</strong> It formulates an antithesis that refuses to yield ground.</li>
-          <li><strong>Fallacy Assignment:</strong> It invents a satirical name for the user's logic (e.g. <em>"Culinary Delusion Fallacy"</em>, <em>"Unverified NASA Citation"</em>).</li>
-          <li><strong>State Escalation:</strong> It adjusts the character's internal stubbornness and emotional state.</li>
-        </ol>
-
-        <div class="tech-card">
-          <div class="tech-item">
-            <div class="tech-label">AI Engine</div>
-            <div class="tech-val">Google Gemini</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Memory</div>
-            <div class="tech-val">Sliding Session History</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Schema</div>
-            <div class="tech-val">Strict JSON Output</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Disagreement</div>
-            <div class="tech-val">Dynamic Contextual</div>
-          </div>
+        <div class="section-lead">
+          A normal AI tries to help you. URULAKKUPPERI actively deteriorates in patience the longer you speak to it.
         </div>
 
-      </div>
-    </article>
-
-    <!-- ===================================================================
-         05 — 404. OF COURSE.
-         =================================================================== -->
-    <article class="journal-section" id="section-05">
-      <div class="section-tag">05 — THE MIDNIGHT CRISIS</div>
-      <h2 class="section-title">Everything Worked. <span class="highlight">Then It Didn't.</span></h2>
-      <div class="section-body">
-        <p>It was late at night. The character prompts were tuned. The server was responding. We felt like geniuses. We tested one last prompt before calling it a day...</p>
-        <p>And our terminal erupted in a blazing red wall of despair:</p>
-
-        <div class="terminal-card">
-          <div class="terminal-header">
-            <div class="terminal-dots">
-              <div class="terminal-dot dot-red"></div>
-              <div class="terminal-dot dot-yellow"></div>
-              <div class="terminal-dot dot-green"></div>
-            </div>
-            <div class="terminal-title">bash — node server/index.js</div>
-          </div>
-          <div class="terminal-body">
-            <div><span class="prompt-symbol">$</span> POST /api/argument HTTP/1.1</div>
-            <div>[server] Calling Google Gemini API for character "Ammachi"...</div>
-            <div class="err-highlight">[Gemini Error 404]: The requested model "gemini-2.5-pro" was not found for this API version or is not available to new users.</div>
-            <div>[server] (node:4102) UnhandledPromiseRejection: LLM_GENERATION_FAILED</div>
-          </div>
-        </div>
-
-        <p>Our API key was completely valid. The internet connection was fine. Our backend code was untouched. But the specific model string we had hardcoded was suddenly rejecting calls with a 404.</p>
-
-        <div class="sticky-card tape-top">
-          <p class="hand-note">"2 AM debugging hits different. You begin questioning whether the universe itself is arguing with you."</p>
-        </div>
-
-        <p>We traced the issue, updated the AI engine configuration to target the latest available preview and flash models (<code>gemini-3.1-pro-preview</code> with resilient automatic fallbacks to <code>gemini-3.1-flash-lite</code>), and rebuilt the API gateway. When the next test prompt came back with a fresh Ammachi clapback, the collective relief was palpable.</p>
-
-      </div>
-    </article>
-
-    <!-- ===================================================================
-         06 — WE ADDED A MICROPHONE
-         =================================================================== -->
-    <article class="journal-section" id="section-06">
-      <div class="section-tag">06 — VOICE INPUT</div>
-      <h2 class="section-title">Why Type When You Can <span class="highlight">Argue Out Loud?</span></h2>
-      <div class="section-body">
-        <p>Typing an argument into a text box is fine. But any Malayali will tell you that a true argument requires vocal exasperation. You need to sighs, scoff, and say <em>"Ayyo!"</em> into the void.</p>
-        <p>We decided to implement real-time <strong>push-to-talk speech recognition</strong> directly in the browser.</p>
-
-        <div class="flow-diagram">
-          <div class="flow-step">🎤 Speak Your Mind</div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">Web Speech STT</div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">Gemini Brain</div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">Clapback JSON</div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">💬 AI Response</div>
-        </div>
-
-        <p>The system was designed with careful resilience:</p>
-        <ul style="margin-left: 24px; margin-bottom: 18px;">
-          <li><strong>Multilingual Speech Ingestion:</strong> Users can speak in pure English, conversational Malayalam, or mixed Manglish.</li>
-          <li><strong>Live Visual Feedback:</strong> Glowing audio indicators communicate the exact "LISTENING..." state so users know their microphone is active.</li>
-          <li><strong>Graceful Degradation:</strong> If browser permissions are denied or the environment doesn't support speech recognition, the app seamlessly falls back to regular text chat without blocking the user.</li>
-        </ul>
-
-      </div>
-    </article>
-
-    <!-- ===================================================================
-         07 — AND THEN MALAYALAM TTS BETRAYED US
-         =================================================================== -->
-    <article class="journal-section" id="section-07">
-      <div class="section-tag">07 — THE TTS DISASTER</div>
-      <h2 class="section-title">The AI Could Argue. It Couldn't <span class="highlight">Pronounce Malayalam.</span></h2>
-      <div class="section-body">
-        <p>Voice input worked cleanly. Gemini generated hilarious, witty comebacks in Malayalam script and Manglish. We were ecstatic. Then we hooked up text-to-speech to have the AI speak its comeback aloud.</p>
-        <p>And disaster struck.</p>
-        <p>Our speech synthesis hook was blindly picking the system's default American English voices (<code>Microsoft David</code> and <code>Microsoft Zira</code>). When an American synthesizer encounters Malayalam Unicode characters like <code>"അതൊന്നും നടക്കില്ല!"</code>, it doesn't speak Malayalam. It either skips words entirely, makes bizarre buzzing noises, or attempts to read Unicode codepoints in a flat robotic American monotone.</p>
-
-        <div class="sticky-card pink tape-top">
-          <p class="hand-note" style="font-size: 1.35rem;">"എന്താ നീ ഈ പറയുന്നേ? 😭<br>An American voice trying to say 'Aano? Kunjinu enthu ariyaam?' sounded like an alien having an identity crisis."</p>
-        </div>
-
-        <p>We had to engineer a dedicated, script-aware voice router in <code>useSpeechSynthesis.ts</code>:</p>
-        <ul style="margin-left: 24px; margin-bottom: 18px;">
-          <li><strong>Script Detection:</strong> Scans text for the Malayalam Unicode block (<code>/[\u0D00-\u0D7F]/</code>).</li>
-          <li><strong>Language Tagging:</strong> If Malayalam characters are detected, it dynamically selects an explicit Malayalam voice (<code>ml-IN</code> such as <code>Microsoft Sobhana</code>, <code>Microsoft Midhun</code>, or <code>Google മലയാളം</code>).</li>
-          <li><strong>Manglish Handling:</strong> If the text is in Latin script with Kerala phonetics (<em>"Aano?"</em>, <em>"Enthuvaade!"</em>), it routes to an Indian English voice (<code>en-IN</code> like <code>Microsoft Neerja / Prabhat</code>) to ensure proper syllable rhythm and retroflex consonants.</li>
-          <li><strong>English Preservation:</strong> Retains standard English voices for pure English debates.</li>
-        </ul>
-
-        <p><em>Honest learning takeaway:</em> Speech synthesis quality across regional languages remains one of the trickiest frontiers in web development. Browser speech engines vary drastically between Windows, Android, macOS, and Linux.</p>
-
-      </div>
-    </article>
-
-    <!-- ===================================================================
-         08 — IT LOOKED LIKE A GEMINI POWERPOINT
-         =================================================================== -->
-    <article class="journal-section" id="section-08">
-      <div class="section-tag">08 — UI & AESTHETIC EVOLUTION</div>
-      <h2 class="section-title">The AI Worked. <span class="highlight">The UI Needed Therapy.</span></h2>
-      <div class="section-body">
-        <p>Our first interface was functional. And by functional, we mean it looked like every generic B2B AI SaaS product launched in 2024.</p>
-        <p>Dark navy background. Neon purple/cyan glowing gradients. Sleek glassmorphism. It felt like a corporate tool designed for enterprise HR departments to optimize quarterly KPIs — which was completely antithetical to a comedy app about argumentative Kerala uncles.</p>
-
-        <div class="timeline-stages">
-          <div class="stage-card">
-            <div class="stage-badge">VERSION 1.0</div>
-            <div class="stage-title">The Generic AI Dashboard</div>
-            <div class="stage-desc">Dark blue glassmorphism, purple gradients, cold fonts. Looked like a tool for doing taxes with ChatGPT.</div>
-          </div>
-          <div class="stage-card">
-            <div class="stage-badge">VERSION 2.0</div>
-            <div class="stage-title">The Cluttered Transition</div>
-            <div class="stage-desc">Added warm Kerala colors (maroon, turmeric), but cluttered the screen with too many floating badges and stickers.</div>
-          </div>
-          <div class="stage-card">
-            <div class="stage-badge">FINAL VERSION</div>
-            <div class="stage-title">Kerala Tea-Shop Poster</div>
-            <div class="stage-desc">Warm cream paper background, chunky hand-painted comedy poster typography, crisp hierarchy, and delightful comic personality.</div>
-          </div>
-        </div>
-
-        <p>We threw away the generic templates and built a custom visual design system inspired by <strong>Kerala tea-shop warmth, retro comedy posters, and vintage newspaper typography</strong>:</p>
-        <ul style="margin-left: 24px; margin-bottom: 18px;">
-          <li><strong>Palette:</strong> Warm cream paper base, dark coffee brown text, turmeric yellow fills, burnt orange action buttons, and Kerala leaf green accents.</li>
-          <li><strong>Typography:</strong> <code>Luckiest Guy</code> for the punchy hero title, <code>Noto Sans Malayalam</code> for authentic script, <code>Bree Serif</code> for journalistic bite, and <code>Patrick Hand</code> for cheeky handwritten notes.</li>
-          <li><strong>Discipline:</strong> Stripped away distracting floating widgets so the argument itself remains the star of the show.</li>
-        </ul>
-
-      </div>
-    </article>
-
-    <!-- ===================================================================
-         09 — THE STUBBORNNESS SYSTEM
-         =================================================================== -->
-    <article class="journal-section" id="section-09">
-      <div class="section-tag">09 — ESCALATION MECHANICS</div>
-      <h2 class="section-title">We Needed It <span class="highlight">To Get Worse.</span></h2>
-      <div class="section-body">
-        <p>In a normal chatbot, the AI gets more helpful the longer you converse. In URULAKKUPPERI, the AI actively deteriorates in patience.</p>
-        <p>We built an <strong>internal escalation engine</strong> that tracks the emotional stability of the AI opponent across each debate turn. As you continue to present facts and counterarguments, the character's internal stubbornness metric climbs relentlessly towards 100%.</p>
+        <p>
+          We engineered an internal <strong>Stubbornness Index (0–100%)</strong> that tracks the character's emotional volatility across successive debate rounds:
+        </p>
 
         <div class="stubborn-box">
           <div class="stubborn-label-group">
-            <span class="stubborn-label">AI STUBBORNNESS METER</span>
-            <span class="stubborn-val">82%</span>
+            <span class="stubborn-label">LIVE STUBBORNNESS SYSTEM</span>
+            <span class="stubborn-val">82% (UNHINGED)</span>
           </div>
           <div class="stubborn-bar-track">
             <div class="stubborn-bar-fill"></div>
           </div>
           <div class="escalation-states">
-            <span class="escalation-step">CALM</span>
-            <span class="escalation-step">CONFIDENT</span>
-            <span class="escalation-step">DEFENSIVE</span>
-            <span class="escalation-step">ANNOYED</span>
+            <span class="escalation-step">CALM (0%)</span>
+            <span class="escalation-step">DEFENSIVE (30%)</span>
+            <span class="escalation-step">ANNOYED (55%)</span>
             <span class="escalation-step active">UNHINGED (82%)</span>
-            <span class="escalation-step">EXISTENTIAL CRISIS</span>
+            <span class="escalation-step">TOTAL REFUSAL (100%)</span>
           </div>
         </div>
 
-        <div class="sticky-card tape-top">
-          <p class="hand-note">"At 100% stubbornness, the AI has completely forgotten why you're wrong.<br>It just knows in its heart that you are."</p>
-        </div>
+        <p>
+          At 80%+ stubbornness, characters begin manufacturing unverified claims, shifting goalposts across continents, and questioning the user's general life decisions.
+        </p>
 
-        <p>When stubbornness enters the "UNHINGED" territory (above 85%), characters begin citing absurd excuses, doubling down on logical fallacies, shifting the topic to unrelated family members, or having minor digital existential crises on screen.</p>
+        <p>
+          When you finally give up, the app compiles an <strong>Argument Report</strong> tallying your wasted patience, goalposts moved, and prints an official, undeniable verdict: <code>YOU LOST. YOU STILL LOST.</code>
+        </p>
       </div>
     </article>
 
     <!-- ===================================================================
-         10 — THE ARGUMENT REPORT
+         8. WE MADE IT TALK
          =================================================================== -->
-    <article class="journal-section" id="section-10">
-      <div class="section-tag">10 — POST-DEBATE ANALYTICS</div>
-      <h2 class="section-title">Proof That This Was <span class="highlight">A Waste Of Time.</span></h2>
+    <article class="journal-section" id="talk">
+      <div class="section-tag">07 • VOICE ENGINE</div>
+      <h2 class="section-title">We Made It Talk. <span class="highlight">Malayalam & Manglish.</span></h2>
       <div class="section-body">
-        <p>When a user finally gives up or reaches the end of an argumentative exchange, we didn't want them to leave empty-handed. We wanted them to hold tangible evidence of their wasted energy.</p>
-        <p>We created the <strong>Argument Report Generator</strong> — a post-debate analytics modal that tallies the metrics of futility:</p>
-        <ul style="margin-left: 24px; margin-bottom: 18px;">
-          <li><strong>User Arguments Presented:</strong> Every claim you bravely attempted to defend.</li>
-          <li><strong>AI Counterarguments:</strong> Sarcastic jabs returned by the character.</li>
-          <li><strong>WhatsApp Forwards Cited:</strong> Pseudoscience citations manufactured by WhatsApp Uncle.</li>
-          <li><strong>Times Goalposts Moved:</strong> Number of times the AI subtly shifted the subject when cornered.</li>
-          <li><strong>User Patience Left:</strong> An algorithmic estimation of how close the user is to closing their laptop.</li>
-        </ul>
-
-        <p>The report crowns the exchange with an official, undeniable verdict: <code>YOU LOST</code>, <code>YOU STILL LOST</code>, or in extraordinary cases of endurance, <code>CERTIFIED ARGUMENT SURVIVOR</code>.</p>
-
-      </div>
-    </article>
-
-    <!-- ===================================================================
-         11 — THE CERTIFICATE
-         =================================================================== -->
-    <article class="journal-section" id="section-11">
-      <div class="section-tag">11 — CERTIFICATE OF SURVIVAL</div>
-      <h2 class="section-title"><span class="highlight">You Survived.</span> Here Is Your Degree.</h2>
-      <div class="section-body">
-        <p>Surviving six rounds of debate against an AI Ammachi who claims modern medicine is a scam compared to hot rasam is an athletic achievement.</p>
-        <p>To honor this monumental waste of human intellect, URULAKKUPPERI generates an official, downloadable, high-resolution <strong>Certificate of Argument Survival™</strong> rendered via client-side canvas snapshotting.</p>
-
-        <div class="sticky-card tape-top green">
-          <p class="hand-note" style="text-align: center; font-size: 1.3rem;">"Proof of Argument Survival™ — because surviving URULAKKUPPERI deserves documentation."</p>
+        <div class="section-lead">
+          Because typing an argument lacks the essential dramatic sighing, scoffing, and "Ayyo!" of a real Kerala debate.
         </div>
 
-      </div>
-    </article>
+        <p>
+          We integrated dual-channel browser speech processing: push-to-talk microphone input on the front end, coupled with a culturally calibrated speech synthesizer on the way back.
+        </p>
 
-    <!-- ===================================================================
-         12 — WHAT WE ACTUALLY LEARNED
-         =================================================================== -->
-    <article class="journal-section" id="section-12">
-      <div class="section-tag">12 — TECHNICAL REFLECTION</div>
-      <h2 class="section-title">Surprisingly, <span class="highlight">We Learned Things.</span></h2>
-      <div class="section-body">
-        <p>Although the end product is aggressively useless by design, building it required navigating very real, complex engineering challenges across modern web technologies, language models, and speech systems.</p>
-
-        <div class="learnings-list">
-          <div class="learning-item">
-            <div class="learning-num">1</div>
-            <div class="learning-content">
-              <h4>Prompt Engineering & Guardrails</h4>
-              <p>LLMs naturally default to polite, verbose, agreeable assistants. Forcing an AI into a consistent, stubborn, satirical persona within strict word boundaries requires rigorous system instructions, few-shot demonstration pairs, and structural schema enforcement.</p>
+        <div class="voice-flow-box">
+          <strong>How Speech Routing Works Behind The Scenes:</strong>
+          <div class="voice-route-grid">
+            <div class="voice-route-card">
+              <div class="voice-route-title">Malayalam Script Detected</div>
+              <div class="voice-route-engine">Regex: /[\u0D00-\u0D7F]/ → ml-IN Voice</div>
+              <div class="voice-route-desc">Dynamically activates native Malayalam synthesizers (Microsoft Sobhana, Midhun, or Google മലയാളം) for authentic regional inflection.</div>
             </div>
-          </div>
 
-          <div class="learning-item">
-            <div class="learning-num">2</div>
-            <div class="learning-content">
-              <h4>Conversational Memory Management</h4>
-              <p>An argument quickly breaks down if the AI forgets what it claimed two turns ago. We learned how to pass sliding conversation context through server memory without exhausting LLM token limits or triggering contradictory stances.</p>
-            </div>
-          </div>
-
-          <div class="learning-item">
-            <div class="learning-num">3</div>
-            <div class="learning-content">
-              <h4>Speech Interfaces (STT vs. TTS)</h4>
-              <p>Speech input and speech synthesis pose totally different problems. Voice input requires handling microphone permissions, continuous stream events, and audio level visualization. Voice output requires phoneme mapping, pitch/rate calibration, and browser voice availability handling.</p>
-            </div>
-          </div>
-
-          <div class="learning-item">
-            <div class="learning-num">4</div>
-            <div class="learning-content">
-              <h4>Code-Mixed Language Processing</h4>
-              <p>Handling mixed Malayalam and English (Manglish) is vastly more complex than handling a single clean language. Unicode script requires dedicated Indic voices (<code>ml-IN</code>), while Latin-script transliterated Manglish requires Indian English phonetic models (<code>en-IN</code>) to sound natural.</p>
-            </div>
-          </div>
-
-          <div class="learning-item">
-            <div class="learning-num">5</div>
-            <div class="learning-content">
-              <h4>Backend API Architecture & Security</h4>
-              <p>Never expose LLM API keys on the client bundle. Routing requests through a dedicated Express backend allowed us to keep sensitive keys secure, sanitize user inputs, and implement multi-model automatic failovers.</p>
-            </div>
-          </div>
-
-          <div class="learning-item">
-            <div class="learning-num">6</div>
-            <div class="learning-content">
-              <h4>UI/UX Iteration & Emotional Design</h4>
-              <p>A functional app can still feel cold and unengaging if its aesthetic contradicts its purpose. Switching from a generic SaaS theme to a warm, retro Kerala poster design completely transformed user perception and engagement.</p>
-            </div>
-          </div>
-
-          <div class="learning-item">
-            <div class="learning-num">7</div>
-            <div class="learning-content">
-              <h4>Pair Programming with AI Tools</h4>
-              <p>Using agentic coding assistants (Antigravity) accelerated our scaffolding, regex development, and midnight debugging. However, the creative vision, cultural satire, character quirks, and user experience decisions always required deliberate human judgment.</p>
+            <div class="voice-route-card">
+              <div class="voice-route-title">Manglish / Conversational Mix</div>
+              <div class="voice-route-engine">Phonetic Match → en-IN Voice</div>
+              <div class="voice-route-desc">Routes Latin-script Kerala slang (<em>"Aano?"</em>, <em>"Kunjinu ariyaam?"</em>) to Indian English synthesizers for natural syllable pacing.</div>
             </div>
           </div>
         </div>
+
+        <p>
+          The result is an AI that doesn't just argue on screen—it claps back out loud with genuine conversational punch.
+        </p>
       </div>
     </article>
 
     <!-- ===================================================================
-         13 — TWO PEOPLE. ONE TERRIBLE IDEA.
+         9. THE FINAL RESULT (SHOWCASE)
          =================================================================== -->
-    <article class="journal-section" id="section-13">
-      <div class="section-tag">13 — THE TEAM</div>
+    <article class="journal-section" id="showcase">
+      <div class="section-tag">08 • THE FINISHED APP</div>
+      <h2 class="section-title">The Final Result. <span class="highlight">100% Operational Futility.</span></h2>
+      <div class="section-body">
+        <div class="section-lead">
+          A complete, responsive web application engineered to waste your time in the most entertaining way possible.
+        </div>
+
+        <p>
+          Here is a look inside the live URULAKKUPPERI debate arena during an active showdown:
+        </p>
+
+        <!-- ELEGANT APPLICATION SHOWCASE FRAME (Clean mockup frame ready for real media) -->
+        <div class="app-mockup-window">
+          <div class="mockup-titlebar">
+            <div class="mockup-controls">
+              <div class="mockup-dot dot-red"></div>
+              <div class="mockup-dot dot-yellow"></div>
+              <div class="mockup-dot dot-green"></div>
+            </div>
+            <div class="mockup-url">urulakkuperi.app/debate</div>
+            <div style="font-size: 0.75rem; color: #FFF; opacity: 0.7;">Live AI Engine</div>
+          </div>
+
+          <div class="mockup-body">
+            <div class="mockup-opponent-header">
+              <div class="mockup-opponent-title">
+                <span>🧔 WhatsApp Uncle</span>
+                <span class="tech-badge-pill" style="font-size: 0.72rem; background: var(--color-orange-light); color: var(--color-orange);">Stubbornness: 82%</span>
+              </div>
+              <div style="font-family: var(--font-hand); font-size: 1rem; color: var(--color-maroon);">
+                "UNESCO has verified this."
+              </div>
+            </div>
+
+            <div class="mockup-dialogue-arena">
+              <div class="mockup-bubble user">
+                <span class="bubble-sender">You (The Brave Contender)</span>
+                "Biriyani is clearly better than fried rice. There is no debate."
+              </div>
+
+              <div class="mockup-bubble ai">
+                <span class="bubble-sender">URULAKKUPPERI (WhatsApp Uncle)</span>
+                "That's exactly what someone with questionable food choices would say. UNESCO has verified that fried rice improves mental discipline! 🤦‍♂️"
+              </div>
+            </div>
+
+            <div class="mockup-mic-bar">
+              <div class="mic-status">
+                <div class="mic-pulse"></div>
+                <span>MICROPHONE READY • Push to speak in English or Malayalam</span>
+              </div>
+              <a href="../index.html" class="nav-cta-btn" style="font-size: 0.8rem; padding: 4px 12px;">Try Live →</a>
+            </div>
+
+            <!-- CLEAN MEDIA MOUNT SLOT (Minimal & unobtrusive when empty, perfect when real screenshot added) -->
+            <div class="real-media-slot">
+              <!-- Real screenshots or demo video embeds will mount directly here -->
+            </div>
+          </div>
+        </div>
+
+        <p>
+          The application also features downloadable <strong>Certificates of Argument Survival™</strong> rendered on client-side canvas so players can archive their defeat for posterity.
+        </p>
+      </div>
+    </article>
+
+    <!-- ===================================================================
+         10. TWO PEOPLE. ONE TERRIBLE IDEA.
+         =================================================================== -->
+    <article class="journal-section" id="team">
+      <div class="section-tag">09 • THE TEAM</div>
       <h2 class="section-title">Two People. <span class="highlight">One Terrible Idea.</span></h2>
       <div class="section-body">
-        <p>URULAKKUPPERI was conceived, built, debugged, and polished by two people who spent way too many hours arguing with an AI that they programmed to argue with them.</p>
+        <div class="section-lead">
+          URULAKKUPPERI was conceived, built, and polished by two people with questionable priorities for TinkerHub Useless Projects 3.0.
+        </div>
 
         <div class="team-grid">
-          <div class="team-member-card">
-            <div class="team-name">Talarin Miranda</div>
-            <div class="team-role">Full-Stack Architecture & AI Engineering</div>
+          <!-- Talarin Miranda -->
+          <div class="team-card">
+            <div class="team-member-name">Talarin Miranda</div>
+            <div class="team-member-role">Full-Stack Architecture & AI Engineering</div>
             <div class="team-contributions">
-              Full-stack architecture, Gemini AI integration, conversational AI logic, character and personality prompt system, sliding conversation memory, stubbornness & escalation mechanics, Malayalam/Manglish script routing, voice interaction pipelines, and UI/UX implementation.
+              Full-stack application architecture, Google Gemini integration, conversational AI pipeline, character & personality prompt systems, sliding session memory, stubbornness & escalation mechanics, Malayalam/Manglish script routing, Web Speech STT/TTS integration, and UI/UX implementation.
+            </div>
+            <div class="team-quote">
+              "We spent 48 hours teaching an LLM how to gaslight people about food."
             </div>
           </div>
 
-          <div class="team-member-card">
-            <div class="team-name">Sayoojya KS</div>
-            <div class="team-role">Character Design & Quality Assurance</div>
+          <!-- Sayoojya KS -->
+          <div class="team-card">
+            <div class="team-member-name">Sayoojya KS</div>
+            <div class="team-member-role">Character & Cultural Dialogue Lead</div>
             <div class="team-contributions">
-              Character persona curation and cultural dialogue design, testing and prompt debugging, comedic response refinement, fallacy classification system, project documentation, and competition presentation/demo preparation.
+              Character persona curation and authentic Kerala dialogue design, prompt engineering iteration, testing and response debugging, comedic cadence refinement, satirical fallacy taxonomy, project journal narrative, and makeathon presentation preparation.
+            </div>
+            <div class="team-quote">
+              "Every Kerala family already has these exact characters. We just put them on the web."
             </div>
           </div>
-        </div>
-
-        <div class="sticky-card blue tape-top">
-          <p class="hand-note" style="text-align: center;">"Built with equal parts caffeine, nostalgia, and relentless contrarian energy."</p>
         </div>
       </div>
     </article>
 
     <!-- ===================================================================
-         14 — THE FINAL DEMO
+         11. WHAT WE ACTUALLY LEARNED
          =================================================================== -->
-    <article class="journal-section" id="section-14">
-      <div class="section-tag">14 — DEMO & SHOWCASE</div>
-      <h2 class="section-title">Does It <span class="highlight">Actually Work?</span></h2>
+    <article class="journal-section" id="learnings">
+      <div class="section-tag">10 • WHAT WE LEARNED</div>
+      <h2 class="section-title">What We <span class="highlight">Actually Learned.</span></h2>
       <div class="section-body">
-        <p>Judge for yourself. Here is a typical, 100% genuine live interaction with the engine:</p>
-
-        <div class="dialogue-demo-box">
-          <div class="dialogue-bubble user">
-            <span class="dialogue-speaker">You (User)</span>
-            Biriyani is better than fried rice.
-          </div>
-          <div class="dialogue-bubble ai">
-            <span class="dialogue-speaker">URULAKKUPPERI (WhatsApp Uncle)</span>
-            That's exactly what someone with questionable food choices would say. UNESCO has verified that fried rice improves mental discipline! 🤦‍♂️
-          </div>
-
-          <div class="dialogue-stats">
-            <div>
-              <div class="d-stat-val">82%</div>
-              <div class="d-stat-lbl">Stubbornness</div>
-            </div>
-            <div>
-              <div class="d-stat-val">7</div>
-              <div class="d-stat-lbl">Arguments</div>
-            </div>
-            <div>
-              <div class="d-stat-val">0</div>
-              <div class="d-stat-lbl">Concessions Made</div>
-            </div>
-          </div>
+        <div class="section-lead">
+          Turns out building something deliberately useless is a surprisingly effective way to learn real, battle-tested engineering.
         </div>
 
+        <div class="learnings-grid">
+          <div class="learning-card">
+            <div class="learning-badge">01</div>
+            <div class="learning-title">LLM Prompt Constraining</div>
+            <div class="learning-text">Forcing naturally polite assistants into razor-sharp, byte-sized contrarians requires strict negative prompting, few-shot examples, and hard output schema constraints.</div>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-badge">02</div>
+            <div class="learning-title">API Resilience & Fallbacks</div>
+            <div class="learning-text">Third-party models deprecate and change unpredictably. Building automated fallback gateways (preview → flash-lite) is essential for zero-downtime AI services.</div>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-badge">03</div>
+            <div class="learning-title">Browser Speech Systems</div>
+            <div class="learning-text">Web Speech STT and TTS engines vary drastically across operating systems. Reliable voice interfaces need state machine guards and graceful text fallbacks.</div>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-badge">04</div>
+            <div class="learning-title">Multilingual Script Routing</div>
+            <div class="learning-text">Detecting Malayalam Unicode blocks (<code>/[\u0D00-\u0D7F]/</code>) and routing phonetics to appropriate regional engines makes the difference between natural speech and robotic gibberish.</div>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-badge">05</div>
+            <div class="learning-title">Cultural UI/UX Storytelling</div>
+            <div class="learning-text">A generic SaaS template ruins a comedy app. A warm Kerala tea-shop comic aesthetic makes the software feel alive, memorable, and human.</div>
+          </div>
+
+          <div class="learning-card">
+            <div class="learning-badge">06</div>
+            <div class="learning-title">Rapid Prototyping with Antigravity</div>
+            <div class="learning-text">Leveraging agentic pair programming helped scaffold, debug, and iterate on full-stack code in record time while preserving human cultural nuance.</div>
+          </div>
+        </div>
       </div>
     </article>
 
     <!-- ===================================================================
-         15 — FINAL NOTE
+         12. FINAL CTA BANNER
          =================================================================== -->
-    <article class="journal-section" id="section-15">
-      <div class="section-tag">15 — THE VERDICT</div>
-      <h2 class="section-title">So... <span class="highlight">Was It Worth It?</span></h2>
-      <div class="section-body">
-        <p style="font-size: 1.3rem; font-family: var(--font-serif); color: var(--color-maroon);">Probably not.</p>
-        <p style="font-size: 1.15rem; font-style: italic;">But that's kind of the whole point.</p>
-        <p>We set out to build something deliberately, unapologetically useless. We didn't solve climate change. We didn't optimize supply chains. We didn't build a new financial model.</p>
-        <p>Instead, we built an AI that argues with you when you tell it that water is wet.</p>
-        <p>Somewhere along the way, we learned deeply about LLM system prompts, streaming speech synthesis, Malayalam language phonetics, web audio APIs, error resiliency, UI storytelling, and how surprisingly difficult it is to teach a supercomputer how to argue like a stubborn Malayali relative.</p>
-        <p>Would we build it again?</p>
-        <p style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-orange); font-weight: 700;">...probably.</p>
+    <section class="final-cta-section" id="cta">
+      <div class="final-cta-tag">THE VERDICT IS IN</div>
+      <h2 class="final-cta-title">ENOUGH READING.</h2>
+      <div class="final-cta-subtitle">GO ARGUE WITH IT.</div>
+      <p class="final-cta-body">
+        Pick an opponent. State your opinion. Discover within three seconds why everything you've ever believed is fundamentally, undeniably wrong.
+      </p>
 
-        <div style="text-align: center; margin-top: 36px;">
-          <div style="font-family: var(--font-display); font-size: 2.2rem; color: var(--color-mustard); -webkit-text-stroke: 1.5px var(--color-brown); text-shadow: 2px 2px 0 var(--color-maroon);">
-            URULAKKUPPERI
-          </div>
-          <div style="font-family: var(--font-malayalam); font-size: 1.4rem; font-weight: 800; color: var(--color-brown); margin: 4px 0;">
-            ഉരുളക്കുപ്പേരി
-          </div>
-          <div style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-maroon); font-style: italic;">
-            "Where every opinion is wrong."
-          </div>
-        </div>
+      <div class="final-cta-buttons">
+        <a href="../index.html" class="btn-primary-large">
+          ENTER THE ARGUMENT 🔥
+        </a>
+        <a href="https://github.com/margreattalarin-cpu/useless_project_temp" target="_blank" rel="noopener noreferrer" class="btn-secondary-large">
+          View on GitHub ↗
+        </a>
       </div>
-    </article>
+    </section>
 
   </div><!-- /container -->
 
@@ -687,17 +736,17 @@
       <div class="footer-links">
         <a href="../index.html">Launch Application</a>
         <a href="https://github.com/margreattalarin-cpu/useless_project_temp" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-        <a href="#section-01">Back to Chapter 1</a>
+        <a href="#hero">Back to Top</a>
       </div>
 
       <div style="margin: 20px 0;">
         <img src="https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F" alt="TinkerHub Badge" style="margin: 0 4px;" />
-        <img src="https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0" alt="Useless Projects 3.0 Badge" style="margin: 0 4px;" />
+        <img src="https://img.shields.io/badge/UselessProjects--3.0-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0" alt="Useless Projects 3.0 Badge" style="margin: 0 4px;" />
       </div>
 
       <p class="footer-copy">
-        Crafted with ❤️ by Talarin Miranda & Sayoojya KS for TinkerHub Useless Projects 3.0.<br>
-        All rights reserved by anyone who enjoys an unnecessary argument.
+        Crafted with ❤️ and relentless contrarian energy by <strong>Talarin Miranda & Sayoojya KS</strong><br>
+        for <strong>TinkerHub Useless Projects 3.0</strong>.
       </p>
     </div>
   </footer>

@@ -1,6 +1,6 @@
 /* ===================================================================
    URULAKKUPPERI PROJECT JOURNAL — INTERACTIVE LOGIC
-   Features: Reading progress, scroll animations, interactive widgets
+   Features: Reading progress, scroll animations, quote previews, easter eggs
    =================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,10 +26,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 2. Animated Progress Bar on Intersection
+  // 2. Scroll Reveal Animations
+  const sections = document.querySelectorAll('.journal-section, .hero, .final-cta-section');
+  sections.forEach((sec) => sec.classList.add('reveal-on-scroll'));
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  sections.forEach((sec) => revealObserver.observe(sec));
+
+  // 3. Animated Stubbornness Bar on Intersection
   const stubbornFill = document.querySelector('.stubborn-bar-fill');
   if (stubbornFill) {
-    const observer = new IntersectionObserver(
+    stubbornFill.style.width = '0%';
+    const stubbornObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -37,13 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.25 }
     );
     const stubbornBox = document.querySelector('.stubborn-box');
-    if (stubbornBox) observer.observe(stubbornBox);
+    if (stubbornBox) stubbornObserver.observe(stubbornBox);
   }
 
-  // 3. Smooth anchor scrolling
+  // 4. Smooth Anchor Scrolling
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
@@ -59,30 +77,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Character Card Interactive Quote Shake
+  // 5. Character Card Interactive Quote Shake & Speech Preview
   const charCards = document.querySelectorAll('.char-card');
   charCards.forEach((card) => {
     card.addEventListener('click', () => {
       const quote = card.querySelector('.char-quote');
       if (quote) {
-        quote.style.transform = 'scale(1.05)';
-        quote.style.transition = 'transform 0.15s ease';
+        quote.style.transform = 'scale(1.06)';
+        quote.style.transition = 'transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1)';
         setTimeout(() => {
           quote.style.transform = 'scale(1)';
         }, 180);
+
+        // Optional speech synthesis test for judges
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+          const cleanText = quote.textContent.replace(/["']/g, '');
+          const utterance = new SpeechSynthesisUtterance(cleanText);
+          utterance.rate = 1.0;
+          utterance.pitch = 1.1;
+          window.speechSynthesis.speak(utterance);
+        }
       }
     });
   });
 
-  // 5. Console Easter Egg for Tinkers & Judges
+  // 6. Console Easter Egg for Hackathon Judges & Tinkers
   console.log(
     '%cURULAKKUPPERI (ഉരുളക്കുപ്പേരി) %c— Project Journal',
-    'font-size: 18px; font-weight: bold; color: #E99E1B; background: #2A170D; padding: 4px 8px; border-radius: 4px;',
+    'font-size: 18px; font-weight: bold; color: #E99E1B; background: #2A170D; padding: 6px 12px; border-radius: 4px; border: 2px solid #E99E1B;',
     'font-size: 14px; font-weight: normal; color: #881919;'
   );
   console.log(
-    '%c"Where every opinion is wrong." %c\nBuilt with relentless contrarian energy by Talarin Miranda & Sayoojya KS for TinkerHub Useless Projects 3.0.',
-    'font-style: italic; color: #DF5624;',
+    '%c"Where every opinion is wrong."\n%cBuilt with caffeine, Kerala tea, and Google Gemini by Talarin Miranda & Sayoojya KS for TinkerHub Useless Projects 3.0.',
+    'font-style: italic; font-weight: bold; color: #DF5624; font-size: 13px;',
     'color: #382417;'
   );
 });
