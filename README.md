@@ -169,7 +169,7 @@ The final verdict screen, awarding the user a ridiculous “Certified Argument S
 *Explain what the video demonstrates*
 
 # Additional Demos
-[Add any extra demo materials/links]
+https://drive.google.com/file/d/1QpCwRxAfZzLicAVv_PtYSCN5huJ1OTKw/view?usp=drive_link
 
 ## Team Contributions
 - Talarin Miranda: Full-stack development, Gemini AI integration, character and conversation logic, memory and stubbornness system, voice interaction, Malayalam/Manglish support, and UI implementation.
