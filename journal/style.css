@@ -425,44 +425,101 @@ body {
   transform: rotate(0.8deg);
 }
 
-/* MEDIA PLACEHOLDERS */
+/* ARCHIVAL EVIDENCE PLACEHOLDERS / MOUNT SLOTS */
 .media-placeholder {
   background: var(--bg-paper-dark);
-  border: 2px dashed var(--color-brown);
+  border: 2.5px dashed var(--color-brown);
   border-radius: var(--radius-md);
-  padding: 28px 20px;
-  margin: 24px 0;
+  padding: 30px 20px 24px;
+  margin: 28px 0;
   text-align: center;
   position: relative;
+  box-shadow: var(--shadow-comic-sm);
   transition: all 0.2s ease;
 }
 
 .media-placeholder:hover {
   border-color: var(--color-orange);
-  background: #F8F2E4;
+  background: #F6EDE0;
+}
+
+/* Tape strip on the top of each evidence mount */
+.media-placeholder::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 80px;
+  height: 20px;
+  background: rgba(233, 158, 27, 0.6);
+  border: 1px dashed rgba(42, 23, 13, 0.45);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  z-index: 2;
 }
 
 .media-badge {
-  display: inline-block;
-  background: var(--color-brown);
-  color: #FFF;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-mustard-light);
+  color: var(--color-brown);
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  font-weight: 700;
-  padding: 3px 10px;
+  font-weight: 800;
+  padding: 5px 14px;
   border-radius: 4px;
-  margin-bottom: 10px;
+  border: 1.5px solid var(--color-brown);
+  box-shadow: 2px 2px 0 var(--color-brown);
+  margin-bottom: 16px;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-.media-icon {
-  font-size: 2.2rem;
-  margin-bottom: 8px;
+.media-badge.video {
+  background: var(--color-orange-light);
+  color: var(--color-orange);
+  border-color: var(--color-brown);
+}
+
+.media-badge.incident {
+  background: var(--color-maroon-light);
+  color: var(--color-maroon);
+  border-color: var(--color-brown);
+}
+
+.media-badge.code {
+  background: #E8F5E9;
+  color: var(--color-green);
+  border-color: var(--color-brown);
+}
+
+.media-mount-box {
+  background: #FCF8EF;
+  border: 1.5px dashed #C8B59B;
+  border-radius: var(--radius-sm);
+  padding: 22px 16px 18px;
+  max-width: 600px;
+  margin: 0 auto 12px;
+}
+
+.media-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFF;
+  border: 1.5px solid var(--color-brown);
+  box-shadow: 2px 2px 0 var(--color-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 1.65rem;
 }
 
 .media-title {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1.22rem;
   font-weight: 700;
   color: var(--color-brown);
   margin-bottom: 6px;
@@ -470,11 +527,32 @@ body {
 
 .media-caption {
   font-family: var(--font-sans);
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--color-brown-muted);
-  max-width: 540px;
-  margin: 0 auto;
-  font-style: italic;
+  max-width: 500px;
+  margin: 0 auto 10px;
+  line-height: 1.5;
+}
+
+.media-status-tag {
+  display: inline-block;
+  background: #FFF;
+  border: 1px dashed var(--color-brown-muted);
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-brown);
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.media-hand-note {
+  font-family: var(--font-hand);
+  font-size: 1.12rem;
+  color: var(--color-maroon);
+  margin-top: 12px;
+  display: block;
 }
 
 /* REAL EMBEDDED IMAGE CARD (when screenshot available) */
