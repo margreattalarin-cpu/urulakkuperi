@@ -1,74 +1,117 @@
 <img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
 # URULAKKUPPERI (ഉരുളക്കുപ്പേരി) 🎯
-> *"Where every opinion is wrong."*
+
 
 ## Basic Details
-### Team Name: URULAKKUPPERI
+### Team Name: pointless
+
+
+### Team Members
+- Team Lead: Talarin Miranda - SNMIMT Maliankara
+- Member 2: Sayoojya K.S - SNMIMT Maliankara
 
 ### Project Description
-A satirical Kerala debate comedy web application where you can argue any opinion against stubborn Malayali AI archetypes (Ammachi, WhatsApp Uncle, Judgemental Aunty, Bangalore Tech Bro, Cynical Cinema Critic, etc.). Features real-time browser speech recognition (voice input) and natural Malayalam/Manglish speech synthesis (TTS).
+URULAKKUPPERI is a satirical Kerala debate comedy web application where users can state any opinion, only to be relentlessly contradicted by stubborn Malayali AI archetypes (Ammachi, WhatsApp Uncle, Judgemental Aunty, Bangalore Tech Bro, Average Malayali, and The Final Boss). It features real-time browser voice input (Speech-to-Text) and natural Malayalam/Manglish speech synthesis (TTS), wrapped in a vibrant retro Kerala tea-shop comic aesthetic.
 
 ### The Problem (that doesn't exist)
-People in real life and Kerala family WhatsApp groups actually expect rational, calm, open-minded conversations where the other party admits you have a good point.
+People in real life, family gatherings, and WhatsApp groups actually expect rational, calm, open-minded conversations where the other party listens to facts, admits mistakes, and gracefully concedes that you have a point.
 
 ### The Solution (that nobody asked for)
-URULAKKUPPERI: An AI argument engine that refuses to agree with you under any circumstances. No matter what opinion you hold, the AI contradicts you with relentless stubbornness, moves the goalposts, cites ridiculous WhatsApp forwards, and claps back with punchy, sarcastic Kerala comebacks (strictly under 30 words) spoken aloud in natural conversational Malayalam or Manglish.
-
----
+URULAKKUPPERI: An AI argument simulator that guarantees 100% contrarian defiance. No matter how universally accepted your point is (e.g. *"Water is wet"*, *"The sun rises in the east"*), the AI refuses to agree, moves the goalposts, cites unverified WhatsApp University forwards, and claps back with punchy, sarcastic 1-2 sentence comebacks in conversational Malayalam and Manglish spoken aloud with authentic Kerala pronunciation.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- **Languages**: TypeScript, JavaScript, HTML5, CSS3
-- **Frontend Framework**: React 19, Vite, Tailwind CSS
-- **Backend Framework**: Node.js, Express.js
-- **AI Integration**: Google Gemini API (`@google/genai`)
-- **Speech Technologies**: Web Speech API (`SpeechRecognition` for voice input, `SpeechSynthesis` for Malayalam/Manglish speech output)
-- **UI & Animation**: Lucide React, Canvas Confetti
+- **Languages used**: TypeScript, JavaScript, HTML5, CSS3
+- **Frameworks used**: React 19, Vite, Express.js
+- **Libraries used**: `@google/genai` (Google Gemini API), Lucide React, Canvas Confetti, Tailwind CSS
+- **Tools used**: Web Speech API (`SpeechRecognition` for voice input, `SpeechSynthesis` for Malayalam/Manglish TTS), PostCSS
 
----
+For Hardware:
+- *N/A (Pure Software Project)*
 
-## Key Features
-- **Satirical Malayali Archetypes**:
-  - **Ammachi**: Nostalgic matriarch who guilt-trips and compares everything to *"njangalude kaalathu"*.
-  - **WhatsApp Uncle**: Dean of WhatsApp University citing unverified NASA/UNESCO forwards.
-  - **Judgemental Aunty**: Passive-aggressive relative comparing you to Sharmaji's son in Dubai.
-  - **Bangalore Tech Bro**: Jargon-spewing founder talking about synergy, 10M DAUs, and pivots.
-  - **Cynical Cinema Critic**: Dissects commercial hits and declares all popular movies derivative.
-- **Natural Malayalam/Manglish TTS**:
-  - Automatically routes Malayalam script to Malayalam-capable neural voices (`ml-IN`).
-  - Routes Manglish conversations to Indian English phonetics (`en-IN`).
-  - Preserves standard English speech synthesis for English debates.
-- **Voice Input (Speech-to-Text)**: Push-to-talk mic button for speech input directly in browser.
-- **Kerala Retro Visual Identity**: Hand-painted comic poster typography, tea-shop warmth, vibrant colors.
-
----
-
-## Implementation
-### Installation
+### Implementation
+For Software:
+# Installation
 ```bash
-git clone https://github.com/margreattalarin-cpu/useless_project_temp.git
-cd useless_project_temp
+# Clone the repository
+git clone https://github.com/margreattalarin-cpu/urulakkuperi.git
+cd urulakkuperi
+
+# Install dependencies
 npm install
 ```
 
-### Environment Setup
-Create a `.env` file in the root directory (see `.env.example`):
-```env
-PORT=3001
-GEMINI_API_KEY=your_gemini_api_key_here
-```
-
-### Run Locally
+# Run
 ```bash
+# Set up environment variables (.env)
+cp .env.example .env
+# Add your GEMINI_API_KEY in .env
+
+# Start both backend server (port 3001) and Vite client (port 5173)
 npm run dev
 ```
-- Web Client: `http://localhost:5173`
-- Backend Server: `http://localhost:3001`
+
+### Project Documentation
+For Software:
+
+# Screenshots (Add at least 3)
+<img width="1526" height="722" alt="Screenshot 2026-09-12 033932" src="https://github.com/user-attachments/assets/db514f86-b166-4d73-8873-9888458708d4" />
+*Hero Landing Page: Hand-painted Kerala comedy poster typography ("URULAKKUPPERI" / "ഉരുളക്കുപ്പേരി"), character selection cards, and debate controls.*
+
+<img width="1532" height="707" alt="Screenshot 2026-09-12 033954" src="https://github.com/user-attachments/assets/e4ac76cc-fca0-45e9-844f-11e9ede8f8ca" />
+*Live Argument Arena: WhatsApp-style casual debate screen with dynamic stubbornness meter, confidence tracker, and real-time fallacy tagging.*
+
+<img width="1530" height="722" alt="Screenshot 2026-09-12 034304" src="https://github.com/user-attachments/assets/af1cb169-7d79-4154-9ad0-7b556b9ab2a2" />
+*Speech Interaction: Push-to-talk voice recognition (STT) with audio level waves and natural Malayalam/Manglish speech output (TTS).*
+
+<img width="1523" height="720" alt="Screenshot 2026-09-12 034359" src="https://github.com/user-attachments/assets/58b2a978-43ed-4ae1-b5b3-18bc14d9b4e7" />
+*A tongue-in-cheek certificate generated after surviving an argument with URULAKKUPPERI.*
+
+# Diagrams
+![Workflow](https://mermaid.ink/img/pako:eNptkctuwjAMhl_F8nkh-wAuVFs3aEKbxoWbh5Dk0FppkzhJjWrfvZSmjZOm9if_f7a_bE5VJY1Fv9Pq5Kxgd_Q4Ojhj7w4jFzrn9u7gC08s9f61b17qFvhR021v3vI84G5YF_iX5954N76yG-5m3r111jM_031lD_T_W_v1v7q-4b-1z563H_V3Xv3w1-rfP-7b78_b7_X9e__-e-_eew_4e_gE8_gL1w?type=png)
+
+```mermaid
+graph TD
+    A[User Voice Input / Mic] -->|Push-to-Talk| B[Browser SpeechRecognition]
+    B -->|Transcribed Text| C[React 19 Frontend App]
+    C -->|POST /api/argument| D[Node.js Express Backend]
+    D -->|Context & Character Persona| E[Google Gemini AI Engine]
+    E -->|Structured Satirical Comeback JSON| D
+    D -->|Fallacy, Metric Updates, Counterargument| C
+    C --> F[Chat UI & Animated Stubbornness Meter]
+    C --> G[Intelligent TTS Voice Router]
+    G -->|Malayalam Unicode Script| H[ml-IN Neural Voice: Sobhana/Midhun]
+    G -->|Manglish Latin Script| I[en-IN Indian English Voice: Neerja/Prabhat]
+    G -->|Standard English| J[en-US Character Voice: Zira/David]
+```
+*Architecture & Data Workflow: End-to-end flow from browser push-to-talk speech input to Gemini contrarian logic and script-aware TTS speech output.*
+
+For Hardware:
+*N/A (Pure Software Project)*
+
+# Schematic & Circuit
+*N/A (Pure Software Project)*
+
+# Build Photos
+*N/A (Pure Software Project)*
+
+### Project Demo
+# Video
+[https://drive.google.com/file/d/1QpCwRxAfZzLicAVv_PtYSCN5huJ1OTKw/view?usp=sharing](https://drive.google.com/file/d/1QpCwRxAfZzLicAVv_PtYSCN5huJ1OTKw/view?usp=sharing)
+*Demonstrates starting a debate, voice recognition, real-time Gemini contrarian comebacks, and Malayalam speech synthesis.*
+
+# Additional Demos
+- Web Application: `http://localhost:5173`
+- Backend API Status: `http://localhost:3001/api/health`
+- Character Catalog API: `http://localhost:3001/api/characters`
+
+## Team Contributions
+- **Talarin Miranda**: Full-stack architecture, Gemini AI integration, conversational AI logic, character/personality system, conversation memory, stubbornness & escalation mechanics, Malayalam/Manglish support, voice interaction, and UI/UX implementation.
+- **Sayoojya K.S**: Character and prompt design, testing and debugging, response refinement, documentation, and presentation/demo preparation.
 
 ---
-
 Made with ❤️ at TinkerHub Useless Projects 
 
 ![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
