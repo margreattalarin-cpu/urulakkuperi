@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'font-size: 14px; font-weight: normal; color: #881919;'
   );
   console.log(
-    '%c"Where every opinion is wrong."\n%cBuilt with caffeine, Kerala tea, and Google Gemini by Talarin Miranda & Sayoojya KS for TinkerHub Useless Projects 3.0.',
+    '%c"Where every opinion is wrong."\n%cBuilt during an 18-hour overnight make-a-thon with caffeine, Kerala tea, and Google Gemini by Talarin Miranda & Sayoojya KS for TinkerHub Useless Projects 3.0.',
     'font-style: italic; font-weight: bold; color: #DF5624; font-size: 13px;',
     'color: #382417;'
   );
