@@ -43,6 +43,8 @@ For Software:
 For Software:
 # Installation
 npm install
+
+Create a .env file in the project root:
 GEMINI_API_KEY=your_api_key_here
 
 # Run
