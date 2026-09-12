@@ -7,7 +7,7 @@
   <meta name="description" content="The making of a completely unnecessary AI: A storytelling project journal chronicling URULAKKUPPERI, an AI argument simulator built for TinkerHub Useless Projects 3.0." />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥔</text></svg>" />
@@ -33,7 +33,7 @@
       <a href="#talk">07 Voice</a>
       <a href="#showcase">08 The App</a>
       <a href="#team">09 Team</a>
-      <a href="#showcase" class="nav-cta-btn">Enter The Argument 🔥</a>
+      <a href="http://localhost:5173" class="nav-cta-btn btn-enter-argument" target="_blank" rel="noopener noreferrer">Enter The Argument 🔥</a>
     </div>
   </nav>
 
@@ -63,11 +63,11 @@
       </div>
 
       <div class="hero-cta-group">
-        <a href="#showcase" class="btn-primary-large">
+        <a href="http://localhost:5173" class="btn-primary-large btn-enter-argument" target="_blank" rel="noopener noreferrer">
           ENTER THE ARGUMENT 🔥
         </a>
-        <a href="#terrible-idea" class="btn-secondary-large">
-          EXPLORE THE STORY ↓
+        <a href="#showcase" class="btn-secondary-large">
+          TRY IN-PAGE ARENA ↓
         </a>
       </div>
 
@@ -558,8 +558,8 @@
           Here is a look inside the live URULAKKUPPERI debate arena during an active showdown:
         </p>
 
-        <!-- ELEGANT APPLICATION SHOWCASE FRAME (Clean mockup frame ready for real media) -->
-        <div class="app-mockup-window">
+        <!-- INTERACTIVE LIVE DEBATE ARENA & SHOWCASE -->
+        <div class="app-mockup-window" id="arena-container">
           <div class="mockup-titlebar">
             <div class="mockup-controls">
               <div class="mockup-dot dot-red"></div>
@@ -567,43 +567,79 @@
               <div class="mockup-dot dot-green"></div>
             </div>
             <div class="mockup-url">urulakkuperi.app/debate</div>
-            <div style="font-size: 0.75rem; color: #FFF; opacity: 0.7;">Live AI Engine</div>
+            <a href="http://localhost:5173" class="mockup-app-link btn-enter-argument" target="_blank" rel="noopener noreferrer" title="Launch full React application">
+              Open Full App ↗
+            </a>
+          </div>
+
+          <!-- CHARACTER SELECTOR PILLS -->
+          <div class="mockup-char-pills" id="arena-char-pills">
+            <span class="pills-label">OPPONENT:</span>
+            <button type="button" class="mockup-char-pill" data-char="ammachi">👵 Ammachi</button>
+            <button type="button" class="mockup-char-pill active" data-char="whatsapp_uncle">🧔 WhatsApp Uncle</button>
+            <button type="button" class="mockup-char-pill" data-char="aunty">🧕 Judgemental Aunty</button>
+            <button type="button" class="mockup-char-pill" data-char="tech_bro">💻 Bangalore Tech Bro</button>
+            <button type="button" class="mockup-char-pill" data-char="malayali">🌴 Average Malayali</button>
           </div>
 
           <div class="mockup-body">
             <div class="mockup-opponent-header">
               <div class="mockup-opponent-title">
-                <span>🧔 WhatsApp Uncle</span>
-                <span class="tech-badge-pill" style="font-size: 0.72rem; background: var(--color-orange-light); color: var(--color-orange);">Stubbornness: 82%</span>
+                <span id="arena-opponent-name">🧔 WhatsApp Uncle</span>
+                <span class="tech-badge-pill" id="arena-stubborn-badge" style="font-size: 0.72rem; background: var(--color-orange-light); color: var(--color-orange);">
+                  Stubbornness: <strong id="arena-stubborn-val">82%</strong>
+                </span>
               </div>
-              <div style="font-family: var(--font-hand); font-size: 1rem; color: var(--color-maroon);">
+              <div id="arena-catchphrase" style="font-family: var(--font-hand); font-size: 1.05rem; color: var(--color-maroon);">
                 "UNESCO has verified this."
               </div>
             </div>
 
-            <div class="mockup-dialogue-arena">
+            <div class="mockup-dialogue-arena" id="arena-dialogue">
               <div class="mockup-bubble user">
                 <span class="bubble-sender">You (The Brave Contender)</span>
-                "Biriyani is clearly better than fried rice. There is no debate."
+                <span class="bubble-text">"Biriyani is clearly better than fried rice. There is no debate."</span>
               </div>
 
               <div class="mockup-bubble ai">
                 <span class="bubble-sender">URULAKKUPPERI (WhatsApp Uncle)</span>
-                "That's exactly what someone with questionable food choices would say. UNESCO has verified that fried rice improves mental discipline! 🤦‍♂️"
+                <span class="bubble-text">"That's exactly what someone with questionable food choices would say. UNESCO has verified that fried rice improves mental discipline! 🤦‍♂️"</span>
+                <span class="fallacy-badge">Fallacy: Unverified UNESCO Claim</span>
               </div>
             </div>
+
+            <!-- QUICK ARGUMENT CHIPS -->
+            <div class="mockup-quick-chips">
+              <span class="chips-label">Quick Arguments:</span>
+              <button type="button" class="quick-chip-btn" data-arg="Biriyani is better than fried rice.">🍛 Biriyani > Fried Rice</button>
+              <button type="button" class="quick-chip-btn" data-arg="Tea is way better than coffee.">☕ Tea > Coffee</button>
+              <button type="button" class="quick-chip-btn" data-arg="Cats are better pets than dogs.">🐱 Cats > Dogs</button>
+              <button type="button" class="quick-chip-btn" data-arg="Morning walks cure all diseases.">🚶 Morning Walks</button>
+              <button type="button" class="quick-chip-btn" data-arg="Water is definitely wet.">💧 Water is Wet</button>
+            </div>
+
+            <!-- INTERACTIVE INPUT FORM -->
+            <form id="arena-form" class="arena-input-form" onsubmit="return false;">
+              <button type="button" id="arena-mic-btn" class="arena-mic-btn" title="Push to talk in Malayalam or English" aria-label="Microphone Voice Input">
+                🎙️
+              </button>
+              <input type="text" id="arena-input" class="arena-text-input" placeholder="State any opinion to be thoroughly contradicted..." autocomplete="off" />
+              <button type="submit" id="arena-submit-btn" class="arena-submit-btn">
+                ARGUE 🔥
+              </button>
+            </form>
 
             <div class="mockup-mic-bar">
-              <div class="mic-status">
+              <div class="mic-status" id="arena-audio-status">
                 <div class="mic-pulse"></div>
-                <span>MICROPHONE READY • Push to speak in English or Malayalam</span>
+                <span id="arena-status-text">🔊 VOICE ENGINE READY • Spoken in Malayalam/Manglish • Push mic or type</span>
               </div>
-              <a href="#showcase" class="nav-cta-btn" style="font-size: 0.8rem; padding: 4px 12px;">Try Live →</a>
-            </div>
-
-            <!-- CLEAN MEDIA MOUNT SLOT (Minimal & unobtrusive when empty, perfect when real screenshot added) -->
-            <div class="real-media-slot">
-              <!-- Real screenshots or demo video embeds will mount directly here -->
+              <div class="arena-status-right">
+                <span id="arena-server-status" class="server-status-pill online">● Gemini Connected</span>
+                <a href="http://localhost:5173" class="nav-cta-btn btn-enter-argument" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; padding: 4px 10px;">
+                  Full App ↗
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -724,10 +760,13 @@
       </p>
 
       <div class="final-cta-buttons">
-        <a href="#showcase" class="btn-primary-large">
+        <a href="http://localhost:5173" class="btn-primary-large btn-enter-argument" target="_blank" rel="noopener noreferrer">
           ENTER THE ARGUMENT 🔥
         </a>
-        <a href="https://github.com/margreattalarin-cpu/urulakkuperi" target="_blank" rel="noopener noreferrer" class="btn-secondary-large">
+        <a href="#showcase" class="btn-secondary-large">
+          TRY IN-PAGE ARENA ↓
+        </a>
+        <a href="https://github.com/margreattalarin-cpu/useless_project_temp" target="_blank" rel="noopener noreferrer" class="btn-ghost-link">
           View on GitHub ↗
         </a>
       </div>
@@ -742,8 +781,8 @@
       <div class="footer-tagline">"Where every opinion is wrong."</div>
 
       <div class="footer-links">
-        <a href="https://github.com/margreattalarin-cpu/urulakkuperi" target="_blank" rel="noopener noreferrer">Source Code & Run App</a>
-        <a href="https://github.com/margreattalarin-cpu/urulakkuperi" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+        <a href="http://localhost:5173" class="footer-app-link btn-enter-argument" target="_blank" rel="noopener noreferrer">Launch Application</a>
+        <a href="https://github.com/margreattalarin-cpu/useless_project_temp" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
         <a href="#hero">Back to Top</a>
       </div>
 
@@ -763,6 +802,6 @@
   <a href="#" class="back-to-top" id="back-to-top" title="Scroll to Top" aria-label="Back to top">↑</a>
 
   <!-- SCRIPT -->
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
