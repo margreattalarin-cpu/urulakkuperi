@@ -26,7 +26,7 @@ export function App() {
   const [inputKey, setInputKey] = useState('');
   const [keySavedMessage, setKeySavedMessage] = useState<string | null>(null);
 
-  // Check health of backend or fallback to browser static mode
+  // Check health of backend on mount
   useEffect(() => {
     fetch('/api/health')
       .then((res) => res.json())
@@ -34,12 +34,7 @@ export function App() {
         setHealthStatus(data.aiProvider || 'LLM Configured');
       })
       .catch(() => {
-        const stored = localStorage.getItem('urulakkuperi_api_key');
-        if (stored) {
-          setHealthStatus('Gemini API (Browser)');
-        } else {
-          setHealthStatus('Satirical Mode (Offline/Static)');
-        }
+        setHealthStatus('Backend Offline');
       });
   }, []);
 
@@ -80,9 +75,6 @@ export function App() {
     e.preventDefault();
     if (!inputKey.trim()) return;
 
-    localStorage.setItem('urulakkuperi_api_key', inputKey.trim());
-    localStorage.setItem('urulakkuperi_key_provider', keyProvider);
-
     try {
       const res = await fetch('/api/config/key', {
         method: 'POST',
@@ -90,19 +82,16 @@ export function App() {
         body: JSON.stringify({ apiKey: inputKey.trim(), provider: keyProvider })
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to save key to server');
+      if (!res.ok) throw new Error(data.error || 'Failed to save key');
 
       setKeySavedMessage(`Active ${keyProvider.toUpperCase()} key activated!`);
       setHealthStatus(`${keyProvider.toUpperCase()} (Live)`);
-    } catch {
-      // Backend offline / GitHub Pages: client storage works
-      setKeySavedMessage(`Key saved in browser storage!`);
-      setHealthStatus(`${keyProvider.toUpperCase()} (Browser Direct)`);
-    } finally {
       setTimeout(() => {
         setShowKeyModal(false);
         setKeySavedMessage(null);
-      }, 1200);
+      }, 1500);
+    } catch (err: any) {
+      setKeySavedMessage(`Error: ${err.message}`);
     }
   };
 
@@ -171,20 +160,6 @@ export function App() {
               {healthStatus}
             </span>
           </div>
-
-          {/* Project Journal link */}
-          <a
-            href="./journal/"
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl transition-all cursor-pointer shadow-xs active:scale-95 font-bold ${
-              isLanding
-                ? 'bg-[#F3EADB] hover:bg-[#EADDC9] text-[#26160C] border border-[#D9C8B2]'
-                : 'bg-[#340E16] hover:bg-[#48121E] text-[#FEEBC8] border border-[#D4AF37]/50'
-            }`}
-            title="View TinkerHub Project Journal"
-          >
-            <span>📖</span>
-            <span className="hidden md:inline">Journal</span>
-          </a>
 
           {/* Brain Config button */}
           <button

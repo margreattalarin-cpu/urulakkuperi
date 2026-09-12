@@ -7,7 +7,6 @@ import { DemoModeBar } from './DemoModeBar';
 import { useSpeechRecognition } from '../hooks/useSpeechRecognition';
 import { useSpeechSynthesis } from '../hooks/useSpeechSynthesis';
 import { soundEffects } from '../utils/soundEffects';
-import { generateClientDebateResponse } from '../services/clientDebateEngine';
 import { LogOut, Volume2, VolumeX } from 'lucide-react';
 
 interface ConversationProps {
@@ -172,36 +171,33 @@ export const Conversation: React.FC<ConversationProps> = ({
       const data = await res.json();
 
       if (!res.ok || !data.success) {
+        if (data.error === 'MISSING_API_KEY') {
+          setKeyMissingError(data.message || 'No LLM API key configured.');
+          const errMsg: Message = {
+            id: `err-${Date.now()}`,
+            sender: 'ai',
+            text: `⚠️ [LLM API Key Missing] ${data.message || 'Please set GEMINI_API_KEY, GROQ_API_KEY, or OPENAI_API_KEY in .env or via Brain Config to enable dynamic AI argument generation.'}`,
+            timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+            fallacy: 'Missing Neural Engine'
+          };
+          setMessages((prev) => [...prev, errMsg]);
+          return;
+        }
         throw new Error(data.message || data.error || `Server error ${res.status}`);
       }
 
       setKeyMissingError(null);
       handleAiResponse(data);
     } catch (err: any) {
-      // Graceful fallback to client-side debate engine (for GitHub Pages static hosting or standalone usage)
-      console.warn('Backend unavailable, using client-side debate engine:', err);
-      try {
-        const clientData = await generateClientDebateResponse({
-          character,
-          message: userText,
-          conversationHistory: newMessages.map((m) => ({ sender: m.sender, text: m.text })),
-          currentStubbornness: stubbornness,
-          currentConfidence: aiConfidence,
-          memory
-        });
-        setKeyMissingError(null);
-        handleAiResponse(clientData);
-      } catch (fallbackErr: any) {
-        console.error('Debate Engine Error:', fallbackErr);
-        const errMsg: Message = {
-          id: `err-${Date.now()}`,
-          sender: 'ai',
-          text: `⚠️ Error generating counterargument: ${fallbackErr.message || 'Engine offline'}`,
-          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-          fallacy: 'Dialectical Failure'
-        };
-        setMessages((prev) => [...prev, errMsg]);
-      }
+      console.error('API Error:', err);
+      const errMsg: Message = {
+        id: `err-${Date.now()}`,
+        sender: 'ai',
+        text: `⚠️ Error calling AI engine: ${err.message || 'Failed to connect to backend server'}. Make sure your API key is valid.`,
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        fallacy: 'Server Connection Fault'
+      };
+      setMessages((prev) => [...prev, errMsg]);
     } finally {
       setIsThinking(false);
     }
