@@ -61,16 +61,19 @@ The experience supports English, Malayalam, Manglish, and mixed-language convers
 
 The goal was not to build another generic chatbot, but to turn familiar Kerala social personalities and everyday arguments into a playful AI experience—something that feels culturally recognizable, conversational, and completely useless.
 
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+# Screenshots 
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="1521" height="713" alt="Screenshot 2026-09-12 102645" src="https://github.com/user-attachments/assets/735770eb-3970-4737-ae32-6327da6efa9d" />
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+*The landing page introducing URULAKKUPPERI and its unnecessarily serious mission to argue with you.*
 
+<img width="1532" height="707" alt="Screenshot 2026-09-12 033954" src="https://github.com/user-attachments/assets/7fa280e0-784a-4b48-8ded-a400f4e6ae53" />
+
+*The character selection screen where users choose which Kerala-inspired personality they want to argue with.*
+
+<img width="1535" height="730" alt="Screenshot 2026-09-12 034048" src="https://github.com/user-attachments/assets/ce564a35-4295-47d6-98cf-976ceee31fda" />
+
+*The main argument screen showing the selected character, AI responses, conversation, and increasing stubbornness.*
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
