@@ -1,120 +1,115 @@
-<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
+# URULAKKUPPERI — Project Journal Website
+> *TinkerHub Useless Projects 3.0 Build Diary*
 
-
-
-# URULAKKUPPERI (ഉരുളക്കുപ്പേരി) 🎯
-
-
-## Basic Details
-### Team Name:pointless
-
-
-### Team Members
-
-- Member 1: Talarin Miranda- SNMIMT Maliankara
-- Member 2: Sayoojya K.S-SNMIMT Maliankara
-
-### Project Description
-URULAKKUPPERI is a satirical Kerala debate comedy web application where users can state any opinion, only to be relentlessly contradicted by stubborn Malayali AI archetypes (Ammachi, WhatsApp Uncle, Judgemental Aunty, Bangalore Tech Bro, and Cynical Cinema Critic). It features real-time browser voice input (Speech-to-Text) and natural Malayalam/Manglish speech synthesis (TTS), wrapped in a vibrant retro Kerala tea-shop comic aesthetic.
-
-### The Problem (that doesn't exist)
-People in real life, family gatherings, and WhatsApp groups actually expect rational, calm, open-minded debates where the other person listens to facts, admits mistakes, and gracefully concedes that you have a point.
-
-### The Solution (that nobody asked for)
-URULAKKUPPERI: An AI argument simulator that guarantees 100% contrarian defiance. No matter how universally accepted your point is (e.g. *"Water is wet"*, *"The sun rises in the east"*), the AI refuses to agree, moves the goalposts, cites unverified WhatsApp University forwards, and claps back with punchy, sarcastic 1-2 sentence comebacks in conversational Malayalam and Manglish spoken aloud with authentic Kerala pronunciation.
-
-## Technical Details
-### Technologies/Components Used
-For Software:
-- Languages: TypeScript, JavaScript, HTML5, CSS3
-- Frameworks: React 19, Vite, Express.js
-- Libraries: `@google/genai` (Google Gemini API), Lucide React, Canvas Confetti, Tailwind CSS
-- Tools: Web Speech API (`SpeechRecognition` for voice input, `SpeechSynthesis` for Malayalam/Manglish TTS), PostCSS
-
-For Hardware:
-- *N/A (Pure Software Web Application)*
-
-### Implementation
-For Software:
-# Installation
-```bash
-# Clone repository
-git clone https://github.com/margreattalarin-cpu/useless_project_temp.git
-cd useless_project_temp
-
-# Install dependencies
-npm install
-```
-
-# Run
-```bash
-# Set up environment variables (.env)
-cp .env.example .env
-# Add your GEMINI_API_KEY in .env
-
-# Start both backend server (port 3001) and Vite client (port 5173)
-npm run dev
-```
-
-### Project Documentation
-For Software:
-
-# Screenshots 
-<img width="1526" height="722" alt="Screenshot 2026-09-12 033932" src="https://github.com/user-attachments/assets/db514f86-b166-4d73-8873-9888458708d4" />
-
-*Hero Landing Page: Hand-painted Kerala comedy poster typography ("URULAKKUPPERI" / "ഉരുളക്കുപ്പേരി"), character selection cards, and debate controls.*
-
-<img width="1532" height="707" alt="Screenshot 2026-09-12 033954" src="https://github.com/user-attachments/assets/e4ac76cc-fca0-45e9-844f-11e9ede8f8ca" />
-
-*Live Argument Arena: WhatsApp-style casual debate screen with dynamic stubbornness meter (88%), confidence tracker, and real-time fallacy tagging ("Unverified UNESCO Forward").*
-
-<img width="1530" height="722" alt="Screenshot 2026-09-12 034304" src="https://github.com/user-attachments/assets/af1cb169-7d79-4154-9ad0-7b556b9ab2a2" />
-
-*Speech Interaction: Push-to-talk voice recognition (STT) with audio level waves and natural Malayalam/Manglish speech output (TTS).*
-
-<img width="1523" height="720" alt="Screenshot 2026-09-12 034359" src="https://github.com/user-attachments/assets/58b2a978-43ed-4ae1-b5b3-18bc14d9b4e7" />
-
-“A tongue-in-cheek certificate generated after surviving an argument with URULAKKUPPERI.”
-
-# Diagrams
-![Workflow](https://mermaid.ink/img/pako:eNptkctuwjAMhl_F8nkh-wAuVFs3aEKbxoWbh5Dk0FppkzhJjWrfvZSmjZOm9if_f7a_bE5VJY1Fv9Pq5Kxgd_Q4Ojhj7w4jFzrn9u7gC08s9f61b17qFvhR021v3vI84G5YF_iX5954N76yG-5m3r111jM_031lD_T_W_v1v7q-4b-1z563H_V3Xv3w1-rfP-7b78_b7_X9e__-e-_eew_4e_gE8_gL1w?type=png)
-
-```mermaid
-graph TD
-    A[User Voice Input / Mic] -->|Push-to-Talk| B[Browser SpeechRecognition]
-    B -->|Transcribed Text| C[React 19 Frontend App]
-    C -->|POST /api/argument| D[Node.js Express Backend]
-    D -->|Context & Character Persona| E[Google Gemini AI Engine]
-    E -->|Structured Satirical Comeback JSON| D
-    D -->|Fallacy, Metric Updates, Counterargument| C
-    C --> F[Chat UI & Animated Stubbornness Meter]
-    C --> G[Intelligent TTS Voice Router]
-    G -->|Malayalam Unicode Script| H[ml-IN Neural Voice: Sobhana/Midhun]
-    G -->|Manglish Latin Script| I[en-IN Indian English Voice: Neerja/Prabhat]
-    G -->|Standard English| J[en-US Character Voice: Zira/David]
-```
-*Architecture & Data Workflow: End-to-end flow from browser push-to-talk speech input to Gemini contrarian logic and script-aware TTS speech output.*
-
-
-### Project Demo
-# Video
-[   https://drive.google.com/file/d/1QpCwRxAfZzLicAVv_PtYSCN5huJ1OTKw/view?usp=sharing
-
-]
-*Demonstrates starting a debate, voice recognition, real-time Gemini contrarian comebacks, and Malayalam speech synthesis.*
-
-# Additional Demos
-- Web Application: `http://localhost:5173`
-- Backend API Status: `http://localhost:3001/api/health`
-- Character Catalog API: `http://localhost:3001/api/characters`
-
-## Team Contributions
-
-- **Talarin Miranda:** Full-stack architecture, Gemini AI integration, conversational AI logic, character/personality system, conversation memory, stubbornness & escalation mechanics, Malayalam/Manglish support, voice interaction, and UI/UX implementation.
-- **Sayoojya KS:** Character and prompt design, testing and debugging, response refinement, documentation, and presentation/demo preparation.
+This directory contains the standalone, static **Project Journal** website for **URULAKKUPPERI (ഉരുളക്കുപ്പേരി)**. It chronicles the complete journey, technical breakthroughs, debugging midnight crises, character design, and learnings in an engaging, story-driven format.
 
 ---
-Made with ❤️ at TinkerHub Useless Projects 
 
-![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
-![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
+## 📁 File Structure
+
+```
+journal/
+├── index.html        # Complete standalone project journal website
+├── style.css         # Custom Kerala tea-shop & comic-poster visual design system
+├── script.js         # Interactive reading progress, scroll animations, and interactive cards
+└── README.md         # This deployment and preview guide
+```
+
+---
+
+## 🚀 How to Preview Locally
+
+### Option 1: Direct File Open
+Simply double-click `journal/index.html` in your file explorer, or right-click and choose **Open with Google Chrome / Microsoft Edge / Brave**.
+
+### Option 2: Local HTTP Server (Recommended)
+From the root of your project directory, run:
+```bash
+# Using Python
+python -m http.server 8080
+
+# Or using npx serve
+npx serve journal
+```
+Then visit: `http://localhost:8080/journal/` (or `http://localhost:3000`).
+
+---
+
+## 🌐 Deploying to GitHub Pages
+
+You can deploy this journal live on the web in two simple ways:
+
+### Method A: Deploy alongside the main repository (Easiest)
+1. Commit and push the `journal/` folder to your GitHub repository:
+   ```bash
+   git add journal/
+   git commit -m "docs: add Project Journal website for Useless Projects 3.0"
+   git push origin main
+   ```
+2. Go to your GitHub repository: `https://github.com/margreattalarin-cpu/useless_project_temp`.
+3. Click **Settings** (tab at top) → **Pages** (left sidebar).
+4. Under **Build and deployment**:
+   - **Source**: `Deploy from a branch`
+   - **Branch**: Select `main` and `/ (root)`
+   - Click **Save**.
+5. Once deployed (typically 1–2 minutes), your journal is live at:
+   **`https://margreattalarin-cpu.github.io/useless_project_temp/journal/`**
+
+---
+
+### Method B: Deploy using a dedicated GitHub Actions workflow
+If you want the journal to be served as the primary root page of GitHub Pages:
+Create `.github/workflows/deploy-journal.yml`:
+
+```yaml
+name: Deploy Journal to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'journal/**'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'journal'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+Then in **Settings → Pages**, set **Source** to **GitHub Actions**. Your journal will deploy automatically to:
+`https://margreattalarin-cpu.github.io/useless_project_temp/`
+
+---
+
+## 🎨 Design System & Fonts
+The journal uses the exact visual identity of **URULAKKUPPERI**:
+- **Fonts (loaded via Google Fonts)**:
+  - `Luckiest Guy`: Comic titles & branding
+  - `Noto Sans Malayalam`: Malayalam script
+  - `Bree Serif`: Journalistic subtitles & quotes
+  - `Nunito Sans`: Clean, readable body copy
+  - `Patrick Hand`: Authentic handwritten sticky notes & doodles
+- **Palette**: Warm cream paper (`#FAF5EA`), dark coffee brown (`#2A170D`), turmeric mustard (`#E99E1B`), burnt orange (`#DF5624`), deep maroon (`#881919`), and Kerala leaf green (`#286F3E`).
+- **Dependencies**: 0 dependencies. Zero build step. Pure standard HTML5, CSS3, and modern JavaScript.
