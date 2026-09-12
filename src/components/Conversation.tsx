@@ -7,6 +7,7 @@ import { DemoModeBar } from './DemoModeBar';
 import { useSpeechRecognition } from '../hooks/useSpeechRecognition';
 import { useSpeechSynthesis } from '../hooks/useSpeechSynthesis';
 import { soundEffects } from '../utils/soundEffects';
+import { generateClientDebateResponse } from '../services/clientDebateEngine';
 import { LogOut, Volume2, VolumeX } from 'lucide-react';
 
 interface ConversationProps {
@@ -189,15 +190,30 @@ export const Conversation: React.FC<ConversationProps> = ({
       setKeyMissingError(null);
       handleAiResponse(data);
     } catch (err: any) {
-      console.error('API Error:', err);
-      const errMsg: Message = {
-        id: `err-${Date.now()}`,
-        sender: 'ai',
-        text: `⚠️ Error calling AI engine: ${err.message || 'Failed to connect to backend server'}. Make sure your API key is valid.`,
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        fallacy: 'Server Connection Fault'
-      };
-      setMessages((prev) => [...prev, errMsg]);
+      // Graceful fallback to client-side debate engine (for GitHub Pages static hosting or standalone usage)
+      console.warn('Backend unavailable, using client-side debate engine:', err);
+      try {
+        const clientData = await generateClientDebateResponse({
+          character,
+          message: userText,
+          conversationHistory: newMessages.map((m) => ({ sender: m.sender, text: m.text })),
+          currentStubbornness: stubbornness,
+          currentConfidence: aiConfidence,
+          memory
+        });
+        setKeyMissingError(null);
+        handleAiResponse(clientData);
+      } catch (fallbackErr: any) {
+        console.error('Debate Engine Error:', fallbackErr);
+        const errMsg: Message = {
+          id: `err-${Date.now()}`,
+          sender: 'ai',
+          text: `⚠️ Error generating counterargument: ${fallbackErr.message || 'Engine offline'}`,
+          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          fallacy: 'Dialectical Failure'
+        };
+        setMessages((prev) => [...prev, errMsg]);
+      }
     } finally {
       setIsThinking(false);
     }
