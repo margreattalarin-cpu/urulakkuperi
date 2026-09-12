@@ -1,115 +1,118 @@
-# URULAKKUPPERI — Project Journal Website
-> *TinkerHub Useless Projects 3.0 Build Diary*
+<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
 
-This directory contains the standalone, static **Project Journal** website for **URULAKKUPPERI (ഉരുളക്കുപ്പേരി)**. It chronicles the complete journey, technical breakthroughs, debugging midnight crises, character design, and learnings in an engaging, story-driven format.
+
+
+#urulakkuperi 🎯
+
+
+## Basic Details
+### Team Name: pointless
+
+
+### Team Members
+
+- Member 1: Talarin Miranda - SNMIMT Maliankara
+- Member 2:  - Sayoojya K.S - SNMIMT Maliankara
+
+### Project Description
+URULAKKUPPERI is an intentionally useless AI argument simulator that refuses to agree with you. Choose a character, make a claim, and watch it argue back with personality, memory, stubbornness, and Kerala-style humor.
+
+It supports Malayalam, Manglish, and voice interaction, turning everyday opinions into unnecessarily serious arguments.
+
+### The Problem (that doesn't exist)
+
+People have opinions. Sometimes, tragically, nobody is around to tell them they're wrong. URULAKKUPPERI solves this completely unnecessary crisis.
+
+### The Solution (that nobody asked for)
+
+An AI that argues with you for absolutely no productive reason. Pick a character, say something, and watch it disagree using personality, memory, stubbornness, Malayalam/Manglish humor, and increasingly questionable logic.
+
+## Technical Details
+### Technologies/Components Used
+For Software:
+- Languages: TypeScript, JavaScript, HTML, CSS
+- Frameworks: React, Vite, Tailwind CSS
+- Libraries/APIs: Google Gemini API, Web Speech API
+- AI: Gemini for contextual arguments and character-based responses
+- Voice: Browser speech recognition + text-to-speech
+- Tools: Google Antigravity, GitHub, Vercel
+-Deployment: Vercel
+
+
+
+### Implementation
+For Software:
+# Installation
+npm install
+GEMINI_API_KEY=your_api_key_here
+
+# Run
+npm run dev
+
+### Project Documentation
+For Software:
+
+URULAKKUPPERI is a character-driven AI argument simulator inspired by the everyday personalities and conversations familiar to us in Kerala. Instead of creating generic AI personas, we turned recognizable characters around us—like the “Njangalude kaalathu…” Ammachi, the overly confident uncle, the “Njan parayunnilla, but…” aunty, and the tech-savvy friend—into interactive AI personalities.
+
+Built during the 18-hour TinkerHub Useless Projects 3.0 makeathon, the project combines conversational AI, character design, voice interaction, and regional humor to create something intentionally unnecessary but genuinely entertaining.
+
+Users choose a character and present an opinion or claim. Gemini understands the context and responds with a character-specific counterargument rather than simply repeating “no.” The AI remembers earlier statements, notices contradictions, and becomes progressively more stubborn through a 0–100 stubbornness system, moving from calm disagreement to increasingly chaotic arguments.
+
+The experience supports English, Malayalam, Manglish, and mixed-language conversations, along with voice interaction, making the characters feel closer to the way people actually communicate around us.
+
+The goal was not to build another generic chatbot, but to turn familiar Kerala social personalities and everyday arguments into a playful AI experience—something that feels culturally recognizable, conversational, and completely useless.
+
+# Screenshots (Add at least 3)
+![Screenshot1](Add screenshot 1 here with proper name)
+*Add caption explaining what this shows*
+
+![Screenshot2](Add screenshot 2 here with proper name)
+*Add caption explaining what this shows*
+
+![Screenshot3](Add screenshot 3 here with proper name)
+*Add caption explaining what this shows*
+
+# Diagrams
+![Workflow](Add your workflow/architecture diagram here)
+*Add caption explaining your workflow*
+
+For Hardware:
+
+# Schematic & Circuit
+![Circuit](Add your circuit diagram here)
+*Add caption explaining connections*
+
+![Schematic](Add your schematic diagram here)
+*Add caption explaining the schematic*
+
+# Build Photos
+![Components](Add photo of your components here)
+*List out all components shown*
+
+![Build](Add photos of build process here)
+*Explain the build steps*
+
+![Final](Add photo of final product here)
+*Explain the final build*
+
+### Project Demo
+# Video
+[Add your demo video link here]
+*Explain what the video demonstrates*
+
+# Additional Demos
+[Add any extra demo materials/links]
+
+## Team Contributions
+- [Name 1]: [Specific contributions]
+- [Name 2]: [Specific contributions]
+- [Name 3]: [Specific contributions]
 
 ---
+Made with ❤️ at TinkerHub Useless Projects 
 
-## 📁 File Structure
+![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
+![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
 
-```
-journal/
-├── index.html        # Complete standalone project journal website
-├── style.css         # Custom Kerala tea-shop & comic-poster visual design system
-├── script.js         # Interactive reading progress, scroll animations, and interactive cards
-└── README.md         # This deployment and preview guide
-```
 
----
 
-## 🚀 How to Preview Locally
-
-### Option 1: Direct File Open
-Simply double-click `journal/index.html` in your file explorer, or right-click and choose **Open with Google Chrome / Microsoft Edge / Brave**.
-
-### Option 2: Local HTTP Server (Recommended)
-From the root of your project directory, run:
-```bash
-# Using Python
-python -m http.server 8080
-
-# Or using npx serve
-npx serve journal
-```
-Then visit: `http://localhost:8080/journal/` (or `http://localhost:3000`).
-
----
-
-## 🌐 Deploying to GitHub Pages
-
-You can deploy this journal live on the web in two simple ways:
-
-### Method A: Deploy alongside the main repository (Easiest)
-1. Commit and push the `journal/` folder to your GitHub repository:
-   ```bash
-   git add journal/
-   git commit -m "docs: add Project Journal website for Useless Projects 3.0"
-   git push origin main
-   ```
-2. Go to your GitHub repository: `https://github.com/margreattalarin-cpu/useless_project_temp`.
-3. Click **Settings** (tab at top) → **Pages** (left sidebar).
-4. Under **Build and deployment**:
-   - **Source**: `Deploy from a branch`
-   - **Branch**: Select `main` and `/ (root)`
-   - Click **Save**.
-5. Once deployed (typically 1–2 minutes), your journal is live at:
-   **`https://margreattalarin-cpu.github.io/useless_project_temp/journal/`**
-
----
-
-### Method B: Deploy using a dedicated GitHub Actions workflow
-If you want the journal to be served as the primary root page of GitHub Pages:
-Create `.github/workflows/deploy-journal.yml`:
-
-```yaml
-name: Deploy Journal to GitHub Pages
-
-on:
-  push:
-    branches: [main]
-    paths:
-      - 'journal/**'
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
-
-jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'journal'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-```
-Then in **Settings → Pages**, set **Source** to **GitHub Actions**. Your journal will deploy automatically to:
-`https://margreattalarin-cpu.github.io/useless_project_temp/`
-
----
-
-## 🎨 Design System & Fonts
-The journal uses the exact visual identity of **URULAKKUPPERI**:
-- **Fonts (loaded via Google Fonts)**:
-  - `Luckiest Guy`: Comic titles & branding
-  - `Noto Sans Malayalam`: Malayalam script
-  - `Bree Serif`: Journalistic subtitles & quotes
-  - `Nunito Sans`: Clean, readable body copy
-  - `Patrick Hand`: Authentic handwritten sticky notes & doodles
-- **Palette**: Warm cream paper (`#FAF5EA`), dark coffee brown (`#2A170D`), turmeric mustard (`#E99E1B`), burnt orange (`#DF5624`), deep maroon (`#881919`), and Kerala leaf green (`#286F3E`).
-- **Dependencies**: 0 dependencies. Zero build step. Pure standard HTML5, CSS3, and modern JavaScript.
