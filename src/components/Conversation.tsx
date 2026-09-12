@@ -156,7 +156,9 @@ export const Conversation: React.FC<ConversationProps> = ({
 
     try {
       // Call backend API with conversation history and character state
-      const res = await fetch('/api/argument', {
+      const customBackend = localStorage.getItem('urulakkuperi_backend_url')?.trim();
+      const apiUrl = customBackend ? `${customBackend.replace(/\/+$/, '')}/api/argument` : '/api/argument';
+      const res = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

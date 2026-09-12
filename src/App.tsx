@@ -24,11 +24,14 @@ export function App() {
   const [showKeyModal, setShowKeyModal] = useState(false);
   const [keyProvider, setKeyProvider] = useState<'gemini' | 'groq' | 'openai'>('gemini');
   const [inputKey, setInputKey] = useState('');
+  const [backendUrl, setBackendUrl] = useState(() => localStorage.getItem('urulakkuperi_backend_url') || '');
   const [keySavedMessage, setKeySavedMessage] = useState<string | null>(null);
 
   // Check health of backend or fallback to browser static mode
   useEffect(() => {
-    fetch('/api/health')
+    const customBackend = localStorage.getItem('urulakkuperi_backend_url')?.trim();
+    const healthUrl = customBackend ? `${customBackend.replace(/\/+$/, '')}/api/health` : '/api/health';
+    fetch(healthUrl)
       .then((res) => res.json())
       .then((data) => {
         setHealthStatus(data.aiProvider || 'LLM Configured');
@@ -41,7 +44,7 @@ export function App() {
           setHealthStatus('Satirical Mode (Offline/Static)');
         }
       });
-  }, []);
+  }, [backendUrl]);
 
   const handleToggleMute = () => {
     const muted = soundEffects.toggleMute();
@@ -78,25 +81,36 @@ export function App() {
 
   const handleSaveApiKey = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!inputKey.trim()) return;
 
-    localStorage.setItem('urulakkuperi_api_key', inputKey.trim());
-    localStorage.setItem('urulakkuperi_key_provider', keyProvider);
+    if (backendUrl.trim()) {
+      localStorage.setItem('urulakkuperi_backend_url', backendUrl.trim());
+    } else {
+      localStorage.removeItem('urulakkuperi_backend_url');
+    }
+
+    if (inputKey.trim()) {
+      localStorage.setItem('urulakkuperi_api_key', inputKey.trim());
+      localStorage.setItem('urulakkuperi_key_provider', keyProvider);
+    }
 
     try {
-      const res = await fetch('/api/config/key', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ apiKey: inputKey.trim(), provider: keyProvider })
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to save key to server');
+      const customBackend = backendUrl.trim();
+      const saveEndpoint = customBackend ? `${customBackend.replace(/\/+$/, '')}/api/config/key` : '/api/config/key';
+      if (inputKey.trim()) {
+        const res = await fetch(saveEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ apiKey: inputKey.trim(), provider: keyProvider })
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Failed to save key to server');
+      }
 
-      setKeySavedMessage(`Active ${keyProvider.toUpperCase()} key activated!`);
-      setHealthStatus(`${keyProvider.toUpperCase()} (Live)`);
+      setKeySavedMessage(`Settings saved! Active provider updated.`);
+      setHealthStatus(customBackend ? `Connected (${customBackend})` : `${keyProvider.toUpperCase()} (Live)`);
     } catch {
       // Backend offline / GitHub Pages: client storage works
-      setKeySavedMessage(`Key saved in browser storage!`);
+      setKeySavedMessage(`Settings saved in browser storage!`);
       setHealthStatus(`${keyProvider.toUpperCase()} (Browser Direct)`);
     } finally {
       setTimeout(() => {
@@ -331,6 +345,18 @@ export function App() {
                   }
                   className="px-4 py-2.5 bg-[#1A0508] border border-[#5C1523] rounded-xl text-xs font-mono text-[#FFFDF7] placeholder-[#8C4A56] focus:outline-hidden focus:border-[#F59E0B]"
                 />
+              </div>
+
+              <div className="flex flex-col gap-1 text-xs">
+                <label className="text-[#FEEBC8] font-mono font-semibold">Custom Backend Server URL (Optional):</label>
+                <input
+                  type="text"
+                  value={backendUrl}
+                  onChange={(e) => setBackendUrl(e.target.value)}
+                  placeholder="e.g. http://localhost:3002 or https://your-server.onrender.com"
+                  className="px-4 py-2.5 bg-[#1A0508] border border-[#5C1523] rounded-xl text-xs font-mono text-[#FFFDF7] placeholder-[#8C4A56] focus:outline-hidden focus:border-[#F59E0B]"
+                />
+                <span className="text-[10px] text-[#D4A373]">Connect the live site directly to your local backend (e.g. localhost:3002) or cloud server.</span>
               </div>
 
               <div className="flex gap-2 pt-2">
