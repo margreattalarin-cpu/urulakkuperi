@@ -15,10 +15,9 @@
 - Member 2:  - Sayoojya K.S - SNMIMT Maliankara
 
 ### Project Description
-URULAKKUPPERI is an intentionally useless AI argument simulator that refuses to agree with you. Choose a character, make a claim, and watch it argue back with personality, memory, stubbornness, and Kerala-style humor.
+URULAKKUPPERI is an intentionally useless AI argument simulator inspired by the familiar Kerala characters we see around us. Choose a character, make a claim, and watch the AI argue back with its own personality, memory, and increasing stubbornness.
 
-It supports Malayalam, Manglish, and voice interaction, turning everyday opinions into unnecessarily serious arguments.
-
+It supports Malayalam, Manglish, English, and voice interaction, turning everyday opinions into unnecessarily serious arguments.
 ### The Problem (that doesn't exist)
 
 People have opinions. Sometimes, tragically, nobody is around to tell them they're wrong. URULAKKUPPERI solves this completely unnecessary crisis.
