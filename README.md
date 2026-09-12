@@ -75,28 +75,88 @@ The goal was not to build another generic chatbot, but to turn familiar Kerala s
 
 *The main argument screen showing the selected character, AI responses, conversation, and increasing stubbornness.*
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
+                    ┌─────────────────────┐
+                    │       USER          │
+                    │  Makes a claim /    │
+                    │  gives an opinion   │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   CHOOSE CHARACTER  │
+                    │                     │
+                    │ Ammachi / Uncle /   │
+                    │ Aunty / Tech Bro /  │
+                    │ Average Malayali / │
+                    │ Final Boss          │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   CONVERSATION      │
+                    │      CONTEXT        │
+                    │                     │
+                    │ Previous messages   │
+                    │ + current claim     │
+                    └──────────┬──────────┘
+                               │
+                 ┌─────────────┴─────────────┐
+                 ▼                           ▼
+      ┌──────────────────┐        ┌──────────────────┐
+      │   CHARACTER      │        │   STUBBORNNESS   │
+      │   PERSONALITY    │        │      SYSTEM      │
+      │                  │        │                  │
+      │ Tone + behaviour │        │ 0 ────────► 100 │
+      └────────┬─────────┘        └────────┬─────────┘
+               │                           │
+               └─────────────┬─────────────┘
+                             ▼
+                    ┌─────────────────────┐
+                    │    GEMINI AI        │
+                    │                     │
+                    │ Understands claim   │
+                    │ + context + persona │
+                    │ + stubbornness       │
+                    │                     │
+                    │ Generates a         │
+                    │ counterargument      │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │    AI RESPONSE      │
+                    │                     │
+                    │ Malayalam /         │
+                    │ Manglish / English  │
+                    │ + character humour  │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   USER RESPONDS     │
+                    │                     │
+                    │ Argument continues  │
+                    └──────────┬──────────┘
+                               │
+                               └──────► LOOP
+                                        │
+                                        ▼
+                              ┌──────────────────┐
+                              │  FINAL VERDICT   │
+                              │                  │
+                              │ YOU WON / LOST   │
+                              │      / DRAW      │
+                              └────────┬─────────┘
+                                       │
+                                       ▼
+                              ┌──────────────────┐
+                              │    CERTIFICATE   │
+                              │                  │
+                              │ Certified        │
+                              │ Argument Survivor│
+                              └──────────────────┘
+*URULAKKUPPERI workflow showing how a user's claim passes through the selected character and Gemini, while conversation memory and stubbornness shape the AI's response and final verdict.*
 ### Project Demo
 # Video
 [Add your demo video link here]
