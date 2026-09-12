@@ -76,6 +76,9 @@ The goal was not to build another generic chatbot, but to turn familiar Kerala s
 <img width="1535" height="730" alt="Screenshot 2026-09-12 034048" src="https://github.com/user-attachments/assets/ce564a35-4295-47d6-98cf-976ceee31fda" />
 
 *The main argument screen showing the selected character, AI responses, conversation, and increasing stubbornness.*
+
+<img width="1523" height="720" alt="Screenshot 2026-09-12 034359" src="https://github.com/user-attachments/assets/a6a1586d-a8b9-424d-a809-9dfc5453e21e" />
+The final verdict screen, awarding the user a ridiculous “Certified Argument Survivor” certificate after surviving an unnecessarily serious AI argument.
 # Diagrams
 
                     ┌─────────────────────┐
