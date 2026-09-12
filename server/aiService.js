@@ -134,10 +134,10 @@ async function callGemini(apiKey, systemPrompt, userMessage, conversationHistory
   });
 
   const models = [
-    { name: 'gemini-3.1-pro-preview', version: 'v1beta' },
-    { name: 'gemini-3.6-flash', version: 'v1' },
     { name: 'gemini-3.1-flash-lite', version: 'v1' },
+    { name: 'gemini-3.6-flash', version: 'v1' },
     { name: 'gemini-3.5-flash', version: 'v1' },
+    { name: 'gemini-3.1-pro-preview', version: 'v1beta' },
     { name: 'gemini-3.7-flash', version: 'v1' },
     { name: 'gemini-3.8-flash', version: 'v1' }
   ];
