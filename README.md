@@ -172,9 +172,9 @@ The final verdict screen, awarding the user a ridiculous “Certified Argument S
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Talarin Miranda: Full-stack development, Gemini AI integration, character and conversation logic, memory and stubbornness system, voice interaction, Malayalam/Manglish support, and UI implementation.
+- Sayoojya KS: Character and prompt design, testing and debugging, response refinement, documentation, and project presentation/demo preparation.
+  
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
